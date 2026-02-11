@@ -2764,6 +2764,15 @@ img {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-tab-btn img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
 }
 
 .company-tab-btn:hover {
@@ -2803,9 +2812,10 @@ img {
     gap: 25px;
     margin-bottom: 35px;
     padding: 30px;
-    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+    background: white;
     border-radius: 12px;
-    color: white;
+    border: 2px solid #f57d1a;
+    color: #1a3a52;
 }
 
 .company-detail-icon {
@@ -2822,7 +2832,7 @@ img {
 .company-detail-header h3 {
     margin: 0;
     font-size: 32px;
-    color: white;
+    color: #1a3a52;
 }
 
 .company-detail-header .company-tagline {
@@ -3177,9 +3187,10 @@ img {
 /* Company Contact CTA */
 .company-contact-cta {
     padding: 25px;
-    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+    background: #f9fafb;
     border-radius: 8px;
-    color: white;
+    border: 2px solid #f57d1a;
+    color: #1a3a52;
     text-align: center;
 }
 
