@@ -1629,39 +1629,6 @@ p {
     max-width: 120px;
 }
 
-.featured-projects {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 10px;
-}
-
-.featured-projects h3 {
-    margin-bottom: 2rem;
-}
-
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.project {
-    padding: 1.5rem;
-    border-left: 4px solid var(--secondary-color);
-    background: var(--bg-light);
-    border-radius: 5px;
-}
-
-.project strong {
-    display: block;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.project span {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
 
 /* Testimonials Section */
 .testimonials {
