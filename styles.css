@@ -2757,8 +2757,8 @@ img {
 .company-tab-btn {
     padding: 12px 24px;
     border: 2px solid #f57d1a;
-    background: linear-gradient(90deg, #f57d1a 0%, #f57d1a 20%, white 20%, white 100%);
-    color: #1a3a52;
+    background: #f57d1a;
+    color: white;
     font-size: 16px;
     font-weight: 600;
     border-radius: 8px;
@@ -2776,7 +2776,7 @@ img {
 }
 
 .company-tab-btn:hover {
-    background: #f57d1a;
+    background: #e06a0a;
     color: white;
     transform: translateY(-2px);
 }
