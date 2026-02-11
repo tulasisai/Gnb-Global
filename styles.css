@@ -2179,20 +2179,35 @@ p {
         padding: 60px 0 !important;
     }
 
+    .projects-showcase .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .section-header {
+        padding: 0 20px !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .project-nav-list {
+        padding: 0 20px !important;
+    }
+
     .showcase-carousel-wrapper {
-        width: 100vw !important;
-        margin-left: calc(-50vw + 50%) !important;
-        padding: 0 0 !important;
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
         gap: 0 !important;
         display: flex !important;
-        position: relative !important;
+        align-items: stretch !important;
     }
 
     .carousel-arrow {
         position: absolute !important;
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 20px !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 24px !important;
         flex-shrink: 0 !important;
         z-index: 20 !important;
         top: 50% !important;
@@ -2200,52 +2215,60 @@ p {
     }
 
     .carousel-arrow-left {
-        left: 10px !important;
+        left: 5px !important;
     }
 
     .carousel-arrow-right {
-        right: 10px !important;
+        right: 5px !important;
     }
 
     .showcase-carousel {
         height: auto !important;
         gap: 0 !important;
-        width: calc(100vw - 90px) !important;
-        padding: 0 20px !important;
-        margin: 0 0 !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
         scroll-snap-type: x mandatory !important;
         scroll-behavior: smooth !important;
+        flex: 1 !important;
     }
 
     .showcase-item {
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
+        width: 100vw !important;
+        min-width: 100vw !important;
+        max-width: 100vw !important;
         flex-shrink: 0 !important;
         height: auto !important;
-        border-radius: 12px !important;
+        border-radius: 8px !important;
         scroll-snap-align: center !important;
         scroll-snap-stop: always !important;
+        box-sizing: border-box !important;
+        padding: 0 15px !important;
     }
 
     .showcase-item .showcase-image {
-        height: 400px !important;
+        height: 380px !important;
     }
 
     .showcase-info {
-        padding: 2rem !important;
+        padding: 1.8rem !important;
         display: flex !important;
         flex-direction: column !important;
+        overflow: visible !important;
     }
 
     .showcase-info h3 {
-        font-size: 1.4rem !important;
-        margin-bottom: 0.8rem !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 0.6rem !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
 
     .showcase-info p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
     }
 
