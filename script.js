@@ -8,17 +8,35 @@ hamburger.addEventListener('click', () => {
 
 // Close menu when link is clicked and handle company navigation
 document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function(e) {
         navMenu.classList.remove('active');
         
         // Handle GNB Companies dropdown navigation
         const href = this.getAttribute('href');
         if (href === '#gnb-doors-detail') {
-            setTimeout(() => switchCompany('gnb-doors-detail'), 100);
+            e.preventDefault();
+            switchCompany('gnb-doors-detail');
+            // Scroll to gnb-companies section
+            const section = document.getElementById('gnb-companies');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         } else if (href === '#rwes-detail') {
-            setTimeout(() => switchCompany('rwes-detail'), 100);
+            e.preventDefault();
+            switchCompany('rwes-detail');
+            // Scroll to gnb-companies section
+            const section = document.getElementById('gnb-companies');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         } else if (href === '#supreme-tarps-detail') {
-            setTimeout(() => switchCompany('supreme-tarps-detail'), 100);
+            e.preventDefault();
+            switchCompany('supreme-tarps-detail');
+            // Scroll to gnb-companies section
+            const section = document.getElementById('gnb-companies');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     });
 });
