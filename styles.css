@@ -2210,6 +2210,8 @@ p {
         width: calc(100vw - 90px) !important;
         padding: 0 20px !important;
         margin: 0 0 !important;
+        scroll-snap-type: x mandatory !important;
+        scroll-behavior: smooth !important;
     }
 
     .showcase-item {
@@ -2219,6 +2221,8 @@ p {
         flex-shrink: 0 !important;
         height: auto !important;
         border-radius: 12px !important;
+        scroll-snap-align: center !important;
+        scroll-snap-stop: always !important;
     }
 
     .showcase-item .showcase-image {
