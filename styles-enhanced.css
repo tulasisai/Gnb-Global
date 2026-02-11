@@ -1,0 +1,1503 @@
+/* Enhanced Styles - Additional Sections and Improvements */
+
+/* ==================== PRODUCT COMPARISON SECTION ==================== */
+.comparison {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, var(--white) 0%, #f9fafb 100%);
+    position: relative;
+}
+
+.comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+}
+
+.comparison-wrapper {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    font-size: 0.95rem;
+}
+
+.comparison-table thead {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0f2438 100%);
+    color: var(--white);
+}
+
+.comparison-table th {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.3px;
+}
+
+.comparison-table th:first-child {
+    text-align: left;
+}
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: #f0f4f9;
+    box-shadow: inset 0 0 10px rgba(26, 58, 82, 0.05);
+}
+
+.comparison-table td {
+    padding: 1.5rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+}
+
+.comparison-table .feature-name {
+    font-weight: 700;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, #e8f0f8 0%, #d1e0f0 100%);
+    min-width: 160px;
+    padding: 1.5rem !important;
+    border-left: 4px solid var(--secondary-color);
+    text-align: left;
+}
+
+.comparison-table .highlight-row {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #e8950f 100%) !important;
+    font-weight: 700;
+}
+
+.comparison-table .highlight-row td {
+    color: var(--white) !important;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.comparison-table .highlight-row td:first-child {
+    text-align: left;
+    border-left: none;
+}
+
+.comparison-table .highlight-row td.feature-name {
+    color: var(--white) !important;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #e8950f 100%) !important;
+    border-left: none;
+}
+
+.comparison-table tbody tr:last-child {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.comparison-cta {
+    text-align: center;
+    padding: 3rem 2.5rem;
+    background: linear-gradient(135deg, var(--accent-light) 0%, #d1e0f0 100%);
+    border-radius: 12px;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 8px 20px rgba(26, 58, 82, 0.1);
+}
+
+.comparison-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* ==================== FAQ SECTION ==================== */
+.faq {
+    padding: 80px 20px;
+    background: var(--bg-light);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.faq-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--white);
+    border: none;
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: var(--accent-light);
+}
+
+.faq-question .faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1.5rem;
+    color: var(--text-light);
+}
+
+.faq-answer.active {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ==================== TRUST & CERTIFICATIONS SECTION ==================== */
+.trust-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    color: var(--text-dark);
+}
+
+.trust-content {
+    text-align: center;
+}
+
+.trust-content h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.trust-content p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cert-item {
+    background: #f9fafb;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    background: #f3f4f6;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.cert-item h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.trust-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.trust-stats .stat {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.trust-stats .stat strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.trust-stats .stat span {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* ==================== NEWSLETTER SECTION ==================== */
+.newsletter {
+    padding: 80px 20px;
+    background: var(--accent-light);
+}
+
+.newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.newsletter-form {
+    margin-bottom: 1rem;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-input-group input {
+    flex: 1;
+    min-width: 250px;
+    padding: 14px 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(245, 125, 26, 0.1);
+}
+
+.newsletter-input-group button {
+    padding: 14px 32px;
+    white-space: nowrap;
+}
+
+.newsletter-promise {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ==================== ENHANCED FORM STYLING ==================== */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(245, 125, 26, 0.1);
+    background-color: #fafafa;
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.form-group.checkbox label {
+    margin: 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.error-message {
+    display: block;
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+    min-height: 1.2rem;
+}
+
+.form-message {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.form-message.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.form-message.error {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+    border: 1px solid #fca5a5;
+}
+
+.form-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* ==================== MOBILE RESPONSIVE IMPROVEMENTS ==================== */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem;
+    }
+
+    .newsletter-input-group {
+        flex-direction: column;
+    }
+
+    .newsletter-input-group input {
+        min-width: 100%;
+    }
+
+    .newsletter-input-group button {
+        width: 100%;
+    }
+
+    .trust-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== ACCESSIBILITY IMPROVEMENTS ==================== */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* ==================== LOADING ANIMATION ==================== */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(245, 125, 26, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--secondary-color);
+    animation: spin 1s linear infinite;
+}
+
+/* ==================== HERO CTA ENHANCEMENT ==================== */
+.hero-buttons {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+/* ==================== ADDITIONAL CTA SECTIONS ==================== */
+.cta-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #e06a0f 100%);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta-section h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-section .btn {
+    margin-top: 1rem;
+}
+
+/* ==================== PRODUCT RATING DISPLAY ==================== */
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.rating-count {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ==================== BADGE STYLING ==================== */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.badge-success {
+    background: var(--success);
+    color: var(--white);
+}
+
+.badge-featured {
+    background: #f59e0b;
+    color: var(--white);
+}
+
+/* ==================== ENHANCED SECTION SPACING ==================== */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 3rem 0;
+}
+
+/* ==================== VIDEO EMBED RESPONSIVE ==================== */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 2rem;
+    background: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ==================== SMOOTH SCROLLBAR ==================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ==================== PRODUCT DETAILS MODAL ==================== */
+.product-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 60px 40px 40px;
+}
+
+.modal-body h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.modal-body .modal-tagline {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.modal-body .modal-overview {
+    background: linear-gradient(135deg, rgba(26, 58, 82, 0.05) 0%, rgba(245, 125, 26, 0.05) 100%);
+    padding: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.modal-body .modal-description {
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.modal-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.modal-spec-section {
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.modal-spec-section h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.modal-spec-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-spec-section li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.modal-spec-section li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.modal-body .modal-contact-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0f2438 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.modal-body .modal-contact-cta h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body .modal-contact-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.modal-body .modal-contact-btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.modal-body .modal-contact-btn:hover {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .modal-body {
+        padding: 40px 20px 20px;
+    }
+    
+    .modal-body h2 {
+        font-size: 1.8rem;
+    }
+    
+    .modal-specs-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .product-modal {
+        padding: 10px;
+    }
+}
+
+/* ==================== COMPANY TYPE SELECTION MODAL ==================== */
+.company-type-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 58, 82, 0.85) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.company-type-modal.active {
+    display: flex;
+}
+
+.company-type-content {
+    background: linear-gradient(to bottom, #ffffff 0%, #f8fafb 100%);
+    border-radius: 20px;
+    max-width: 650px;
+    width: 100%;
+    padding: 50px 45px 45px;
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.35), 
+                0 0 40px rgba(245, 125, 26, 0.15);
+    position: relative;
+    animation: slideDown 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.company-type-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--border-color);
+    background: var(--white);
+    color: var(--text-dark);
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.company-type-close:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 8px 25px rgba(245, 125, 26, 0.3);
+}
+
+.company-type-content h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.company-type-content > p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 2.8rem;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.company-type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.company-type-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 14px;
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.company-type-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: left;
+}
+
+.company-type-card:hover::before {
+    transform: scaleX(1);
+}
+
+.company-type-card:hover {
+    border-color: var(--secondary-color);
+    background: linear-gradient(135deg, #ffffff 0%, rgba(245, 125, 26, 0.03) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(245, 125, 26, 0.2),
+                0 0 20px rgba(245, 125, 26, 0.1);
+}
+
+.company-type-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.company-type-card:hover .company-type-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.company-type-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.company-type-skip {
+    text-align: center;
+    margin: 0;
+    font-size: 0.95rem;
+    padding-top: 0.5rem;
+}
+
+.company-type-skip a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.company-type-skip a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.company-type-skip a:hover {
+    color: var(--secondary-color);
+}
+
+.company-type-skip a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .company-type-modal {
+        align-items: flex-start;
+        padding-top: 100px;
+        background: linear-gradient(135deg, rgba(26, 58, 82, 0.9) 0%, rgba(0, 0, 0, 0.85) 100%);
+    }
+    
+    .company-type-content {
+        padding: 40px 30px 35px;
+        max-height: calc(100vh - 100px);
+        border-radius: 18px;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4), 
+                    0 0 30px rgba(245, 125, 26, 0.1);
+    }
+    
+    .company-type-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .company-type-grid {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .company-type-card {
+        padding: 1.8rem 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .company-type-icon {
+        font-size: 3rem;
+    }
+    
+    .company-type-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==================== COMPREHENSIVE MOBILE OPTIMIZATION ==================== */
+
+/* Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+    /* Comparison Section */
+    .comparison {
+        padding: 40px 0;
+    }
+
+    .comparison-wrapper {
+        border-radius: 8px;
+        margin-bottom: 2rem;
+    }
+
+    .comparison-table th {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .comparison-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .comparison-table .feature-name {
+        min-width: 100px;
+        padding: 0.75rem 0.5rem !important;
+        font-size: 0.8rem;
+    }
+
+    /* Product Details Modal */
+    .product-modal {
+        padding: 15px;
+    }
+
+    .modal-content {
+        max-width: calc(100vw - 30px);
+        border-radius: 12px;
+    }
+
+    .modal-close {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .modal-body {
+        padding: 40px 20px 20px;
+    }
+
+    .modal-body h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .modal-body .modal-tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-body .modal-overview {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .modal-body .modal-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Product Specs */
+    .modal-body .modal-specs {
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-body .modal-specs h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .spec-item {
+        padding: 0.8rem 1rem;
+    }
+
+    .spec-item h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .spec-item p {
+        font-size: 0.85rem;
+    }
+
+    /* CTA Buttons */
+    .modal-cta {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    .modal-cta .btn {
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        min-height: 44px;
+    }
+
+    /* Company Type Modal */
+    .company-type-modal {
+        padding: 15px;
+    }
+
+    .company-type-content {
+        padding: 35px 20px 25px;
+        max-width: calc(100vw - 30px);
+    }
+
+    .company-type-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .company-type-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .company-type-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 10px;
+    }
+
+    .company-type-icon {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .company-type-card h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Small Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Comparison Section */
+    .comparison {
+        padding: 60px 0;
+    }
+
+    .comparison-table th {
+        padding: 1rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .comparison-table td {
+        padding: 1rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .comparison-table .feature-name {
+        min-width: 140px;
+        padding: 1rem 0.75rem !important;
+    }
+
+    /* Product Modal */
+    .product-modal {
+        padding: 20px;
+    }
+
+    .modal-content {
+        max-width: calc(100vw - 40px);
+    }
+
+    .modal-body {
+        padding: 50px 30px 30px;
+    }
+
+    .modal-body h2 {
+        font-size: 2rem;
+    }
+
+    .modal-body .modal-tagline {
+        font-size: 1.1rem;
+    }
+
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .modal-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .modal-cta .btn {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    /* Company Type Modal */
+    .company-type-content {
+        padding: 40px 30px 30px;
+        max-width: calc(100vw - 40px);
+    }
+
+    .company-type-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .company-type-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.3rem;
+    }
+
+    .company-type-card {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .company-type-icon {
+        font-size: 3.2rem;
+    }
+}
+
+/* Medium Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Comparison Section */
+    .comparison {
+        padding: 80px 0;
+    }
+
+    .comparison-table th {
+        padding: 1.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .comparison-table td {
+        padding: 1.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Product Modal */
+    .modal-content {
+        max-width: 750px;
+    }
+
+    .modal-body h2 {
+        font-size: 2.2rem;
+    }
+
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-cta {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .modal-cta .btn {
+        flex: 1;
+    }
+
+    /* Company Type Modal */
+    .company-type-content {
+        padding: 45px 40px;
+        max-width: 650px;
+    }
+
+    .company-type-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Large Devices (1025px+) */
+@media (min-width: 1025px) {
+    /* Comparison Section */
+    .comparison {
+        padding: 100px 0;
+    }
+
+    .comparison-table th {
+        padding: 1.75rem 1.5rem;
+        font-size: 1.05rem;
+    }
+
+    .comparison-table td {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Product Modal */
+    .modal-content {
+        max-width: 900px;
+    }
+
+    .modal-close:hover {
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    .specs-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modal-cta {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .modal-cta .btn {
+        flex: 1;
+        min-height: 50px;
+    }
+
+    /* Company Type Modal */
+    .company-type-content {
+        padding: 50px 45px 45px;
+        max-width: 650px;
+    }
+
+    .company-type-card {
+        padding: 2.2rem 1.8rem;
+    }
+}
+
+/* ==================== TABLET LANDSCAPE OPTIMIZATION ==================== */
+@media (min-width: 768px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 85vh;
+    }
+
+    .company-type-modal {
+        align-items: center;
+        padding-top: 20px;
+    }
+}
+
+/* ==================== TOUCH DEVICE OPTIMIZATION ==================== */
+@media (hover: none) and (pointer: coarse) {
+    .comparison-table tbody tr:hover {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .modal-close {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .company-type-card {
+        padding-bottom: 2.5rem;
+    }
+}
+
+/* ==================== PRINT OPTIMIZATION ==================== */
+@media print {
+    .navbar,
+    .hero-buttons,
+    .modal-close,
+    button,
+    .btn {
+        display: none;
+    }
+
+    .comparison {
+        padding: 0;
+        page-break-inside: avoid;
+    }
+
+    .comparison-table {
+        font-size: 12pt;
+    }
+}
+
+/* ==================== SCROLL OPTIMIZATION ==================== */
+@media (prefers-reduced-motion: reduce) {
+    .modal-content,
+    .company-type-content {
+        animation: none;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==================== VIEWPORT WIDTH OPTIMIZATIONS ==================== */
+@media (max-width: 360px) {
+    .comparison-table {
+        font-size: 0.75rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .modal-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .company-type-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .comparison-table {
+        font-size: 1rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 1.75rem 1.5rem;
+    }
+}
