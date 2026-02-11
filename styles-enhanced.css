@@ -342,9 +342,9 @@
 }
 
 .newsletter-input-group input:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(245, 125, 26, 0.1);
+    outline: none !important;
+    border-color: var(--border-color);
+    box-shadow: none !important;
 }
 
 .newsletter-input-group button {
@@ -386,9 +386,9 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(245, 125, 26, 0.1);
+    outline: none !important;
+    border-color: var(--border-color);
+    box-shadow: none !important;
     background-color: #fafafa;
 }
 
@@ -494,8 +494,8 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
+    outline: none !important;
+    outline-offset: 0;
 }
 
 /* Skip to main content link */
