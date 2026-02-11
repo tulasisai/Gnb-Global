@@ -6,10 +6,20 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close menu when link is clicked
+// Close menu when link is clicked and handle company navigation
 document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', function() {
         navMenu.classList.remove('active');
+        
+        // Handle GNB Companies dropdown navigation
+        const href = this.getAttribute('href');
+        if (href === '#gnb-doors-detail') {
+            setTimeout(() => switchCompany('gnb-doors-detail'), 100);
+        } else if (href === '#rwes-detail') {
+            setTimeout(() => switchCompany('rwes-detail'), 100);
+        } else if (href === '#supreme-tarps-detail') {
+            setTimeout(() => switchCompany('supreme-tarps-detail'), 100);
+        }
     });
 });
 
