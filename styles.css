@@ -292,6 +292,8 @@ p {
     border: none;
     cursor: pointer;
     gap: 6px;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
 }
 
 .hamburger span {
@@ -2064,6 +2066,35 @@ p {
 
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
+    /* Mobile Tap Highlighting - Remove ALL */
+    * {
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+    }
+
+    *:active,
+    *:focus,
+    *:hover {
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    button,
+    a,
+    .hamburger {
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+    button:active,
+    a:active,
+    .hamburger:active {
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+        opacity: 1;
+    }
+
     h1 {
         font-size: 2rem;
     }
