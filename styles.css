@@ -2204,23 +2204,15 @@ p {
     }
 
     .carousel-arrow {
-        position: absolute !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 24px !important;
-        flex-shrink: 0 !important;
-        z-index: 25 !important;
-        top: 40% !important;
-        transform: translateY(-50%) !important;
-        background: rgba(26, 58, 82, 0.85) !important;
+        display: none !important;
     }
 
     .carousel-arrow-left {
-        left: 15px !important;
+        display: none !important;
     }
 
     .carousel-arrow-right {
-        right: 15px !important;
+        display: none !important;
     }
 
     .showcase-carousel {
