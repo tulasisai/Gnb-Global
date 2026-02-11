@@ -2813,6 +2813,12 @@ img {
     line-height: 1;
 }
 
+.company-logo {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
 .company-detail-header h3 {
     margin: 0;
     font-size: 32px;
