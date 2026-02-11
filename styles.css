@@ -2189,20 +2189,31 @@ p {
         font-size: 20px;
     }
 
+    .showcase-carousel-wrapper {
+        gap: 0.25rem;
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
     .showcase-carousel {
         height: auto;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .showcase-item {
-        width: calc(100vw - 80px);
-        min-width: calc(100vw - 80px);
+        width: 95vw;
+        min-width: 95vw;
+        max-width: 95vw;
         height: auto;
         flex-direction: column;
     }
 
     .showcase-item .showcase-image {
-        height: 250px;
+        height: 300px;
     }
 
     .showcase-info {
