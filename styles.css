@@ -641,7 +641,7 @@ p {
     height: 50px;
     font-size: 28px;
     cursor: pointer;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
