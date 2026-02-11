@@ -23,6 +23,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Remove outline on click, keep for keyboard navigation */
+a, button, input, select, textarea {
+    outline: none;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: var(--text-dark);
