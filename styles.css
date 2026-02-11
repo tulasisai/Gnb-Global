@@ -2190,17 +2190,23 @@ p {
     }
 
     .showcase-carousel {
-        height: 400px;
+        height: auto;
         gap: 1.5rem;
     }
 
     .showcase-item {
-        width: 280px;
-        min-width: 280px;
+        width: calc(100vw - 80px);
+        min-width: calc(100vw - 80px);
+        height: auto;
+        flex-direction: column;
     }
 
     .showcase-item .showcase-image {
-        height: 180px;
+        height: 250px;
+    }
+
+    .showcase-info {
+        padding: 1.5rem;
     }
     }
 
