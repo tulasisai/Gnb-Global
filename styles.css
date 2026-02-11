@@ -2209,17 +2209,18 @@ p {
         height: 50px !important;
         font-size: 24px !important;
         flex-shrink: 0 !important;
-        z-index: 20 !important;
-        top: 50% !important;
+        z-index: 25 !important;
+        top: 40% !important;
         transform: translateY(-50%) !important;
+        background: rgba(26, 58, 82, 0.85) !important;
     }
 
     .carousel-arrow-left {
-        left: 5px !important;
+        left: 15px !important;
     }
 
     .carousel-arrow-right {
-        right: 5px !important;
+        right: 15px !important;
     }
 
     .showcase-carousel {
