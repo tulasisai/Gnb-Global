@@ -2757,7 +2757,7 @@ img {
 .company-tab-btn {
     padding: 12px 24px;
     border: 2px solid #f57d1a;
-    background: white;
+    background: linear-gradient(90deg, #f57d1a 0%, #f57d1a 20%, white 20%, white 100%);
     color: #1a3a52;
     font-size: 16px;
     font-weight: 600;
