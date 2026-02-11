@@ -17,20 +17,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none !important;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Remove outline on click, keep for keyboard navigation */
-a, button, input, select, textarea {
-    outline: none;
+/* Remove all focus outlines */
+*:focus {
+    outline: none !important;
 }
 
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
+*:focus-visible {
+    outline: none !important;
+}
+
+*:active {
+    outline: none !important;
+}
+
+a, button, input, select, textarea {
+    outline: none !important;
+}
+
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: none !important;
 }
 
 body {
