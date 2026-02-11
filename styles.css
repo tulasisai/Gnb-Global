@@ -59,6 +59,8 @@ a:active, button:active, input:active, select:active, textarea:active {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--white);
@@ -93,8 +95,11 @@ h3 {
 }
 
 p {
+    font-size: 1.05rem;
+    font-weight: 500;
     color: var(--text-light);
     margin-bottom: 1rem;
+    line-height: 1.7;
 }
 
 /* Section Headers */
@@ -110,9 +115,11 @@ p {
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--text-light);
     margin: 0;
+    line-height: 1.7;
 }
 
 /* Navigation */
@@ -191,9 +198,9 @@ p {
 .nav-menu a {
     text-decoration: none;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 10px 14px;
     border-radius: 6px;
     white-space: nowrap;
@@ -259,10 +266,10 @@ p {
     display: block;
     padding: 12px 18px;
     color: var(--text-dark) !important;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
     white-space: nowrap;
     border-radius: 0;
-    font-weight: 500;
 }
 
 .dropdown-menu a:hover {
@@ -393,8 +400,8 @@ p {
     color: #f57d1a;
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
@@ -587,8 +594,8 @@ p {
 .stat-box p {
     color: rgba(255, 255, 255, 0.95);
     margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     letter-spacing: 0.3px;
 }
 
@@ -614,7 +621,7 @@ p {
     background: var(--white);
     border: 2px solid var(--border-color);
     border-radius: 25px;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-dark);
     cursor: pointer;
@@ -997,7 +1004,8 @@ p {
 
 .showcase-info p {
     margin: 0.5rem 0 0 0;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--text-light);
     line-height: 1.5;
     flex-grow: 0;
@@ -1223,7 +1231,7 @@ p {
     background: var(--secondary-color);
     color: white;
     padding: 5px 35px;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 700;
     transform: rotate(45deg);
     z-index: 10;
@@ -1307,8 +1315,8 @@ p {
     background: rgba(255, 255, 255, 0.2);
     padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .product-body {
@@ -1317,6 +1325,11 @@ p {
     display: flex;
     flex-direction: column;
     background: var(--white);
+}
+
+.product-body p {
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .product-desc {
@@ -1593,7 +1606,8 @@ p {
 .featured-project p {
     padding: 0 1.5rem 1.5rem;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .partners-grid {
@@ -1661,16 +1675,18 @@ p {
 }
 
 .testimonial-text {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.8;
     font-style: italic;
     margin-bottom: 1.5rem;
+    font-weight: 600;
     color: var(--text-dark);
 }
 
 .testimonial-author {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -1719,7 +1735,8 @@ p {
 
 .detail p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .manufacturing-image {
@@ -1888,11 +1905,13 @@ p {
 .company-features li {
     padding: 0.4rem 0;
     color: var(--text-dark);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .company-locations {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--text-light);
     margin-bottom: 1.5rem;
     padding: 0.75rem;
@@ -1938,7 +1957,8 @@ p {
 
 .footer-section p {
     color: var(--text-light);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .footer-section ul {
@@ -1953,6 +1973,8 @@ p {
     color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .footer-section a:hover {
@@ -2262,7 +2284,8 @@ p {
     }
 
     .showcase-info p {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
+        font-weight: 600;
         line-height: 1.5;
     }
 
@@ -2489,7 +2512,8 @@ p {
     .comparison-table th,
     .comparison-table td {
         padding: 1rem 0.75rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     /* Gallery */
@@ -2711,7 +2735,8 @@ img {
 
 .cert-item p {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .trust-stats {
@@ -2858,7 +2883,9 @@ img {
 
 .company-description p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    font-weight: 600;
     color: #333;
 }
 
@@ -2890,14 +2917,16 @@ img {
 .guarantee-item strong {
     display: block;
     color: #f57d1a;
-    font-size: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .guarantee-item p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
     color: #333;
 }
 
@@ -2935,13 +2964,16 @@ img {
 .service-item strong {
     display: block;
     color: #1a3a52;
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .service-item p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
     color: #666;
 }
 
@@ -2972,8 +3004,9 @@ img {
 .location-group h5 {
     margin: 0 0 12px 0;
     color: #1a3a52;
-    font-size: 16px;
-}
+    font-size: 1.1rem;
+    font-weight: 700;
+}}
 
 .location-group ul {
     margin: 0;
@@ -2983,8 +3016,9 @@ img {
 
 .location-group li {
     margin: 6px 0;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 /* Brands Section */
@@ -3003,7 +3037,9 @@ img {
 .company-brands p {
     margin: 0;
     color: #333;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.7;
 }
 
 /* RWES Solutions */
@@ -3033,14 +3069,16 @@ img {
 .solution-card h5 {
     margin: 0 0 12px 0;
     color: #1a3a52;
-    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .solution-card p {
     margin: 0;
     color: #333;
-    line-height: 1.6;
-    font-size: 14px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 /* Advantages Section */
@@ -3077,14 +3115,16 @@ img {
     display: block;
     color: #1a3a52;
     margin-bottom: 8px;
-    font-size: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .advantage-item p {
     margin: 0;
     color: #333;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 /* Industries Section */
@@ -3109,8 +3149,8 @@ img {
     background: #f57d1a;
     color: white;
     border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 /* Features Detail Section */
@@ -3148,12 +3188,15 @@ img {
     display: block;
     color: #1a3a52;
     margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .feature-detail p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
     color: #666;
 }
 
@@ -3180,8 +3223,8 @@ img {
     color: #1a3a52;
     border: 2px solid #f57d1a;
     border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 /* Company Contact CTA */
@@ -3254,7 +3297,8 @@ img {
 
     .company-tab-btn {
         padding: 10px 16px;
-        font-size: 14px;
+        font-size: 1rem;
+        font-weight: 700;
     }
 
     .services-list,
