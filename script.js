@@ -986,3 +986,34 @@ function switchMinnesotaModalImage(imagePath, element, event) {
         element.classList.add('active');
     }
 }
+
+// GNB Companies Tab Switching
+function switchCompany(companyId) {
+    // Hide all company details
+    document.querySelectorAll('.company-detail').forEach(detail => {
+        detail.classList.remove('active');
+    });
+    
+    // Remove active class from all tabs
+    document.querySelectorAll('.company-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Show selected company detail
+    const selectedCompany = document.getElementById(companyId);
+    if (selectedCompany) {
+        selectedCompany.classList.add('active');
+    }
+    
+    // Set active tab button based on company ID
+    const tabButtons = document.querySelectorAll('.company-tab-btn');
+    tabButtons.forEach((btn, index) => {
+        if (companyId === 'gnb-doors-detail' && index === 0) {
+            btn.classList.add('active');
+        } else if (companyId === 'rwes-detail' && index === 1) {
+            btn.classList.add('active');
+        } else if (companyId === 'supreme-tarps-detail' && index === 2) {
+            btn.classList.add('active');
+        }
+    });
+}

@@ -644,56 +644,310 @@
                 <p>A family of industry-leading construction and industrial solutions</p>
             </div>
 
-            <div class="companies-grid">
-                <!-- GNB Doors -->
-                <div class="company-card">
-                    <div class="company-icon">🚪</div>
-                    <h3>GNB Doors</h3>
-                    <p class="company-tagline">"We Never Leave A Door Open"</p>
-                    <p class="company-desc">24/7 commercial overhead door & loading dock sales, installation, and emergency repair services. Serving Manitoba, Alberta, and Dallas-Fort Worth with certified technicians.</p>
-                    <ul class="company-features">
-                        <li>✓ 1-hour response guarantee</li>
-                        <li>✓ On-site within 3 hours</li>
-                        <li>✓ Commercial overhead doors</li>
-                        <li>✓ Dock levelers & equipment</li>
-                        <li>✓ Rolling steel & high-speed doors</li>
-                    </ul>
-                    <p class="company-locations"><strong>Locations:</strong> Winnipeg, Brandon, Edmonton, Red Deer, Calgary, Dallas-Fort Worth</p>
-                    <a href="https://www.gnbdoors.com/" target="_blank" class="company-btn">Visit GNB Doors →</a>
+            <!-- Company Tabs -->
+            <div class="company-tabs">
+                <button class="company-tab-btn active" onclick="switchCompany('gnb-doors-detail')">🚪 GNB Doors</button>
+                <button class="company-tab-btn" onclick="switchCompany('rwes-detail')">🏗️ RWES</button>
+                <button class="company-tab-btn" onclick="switchCompany('supreme-tarps-detail')">📦 Supreme Tarps</button>
+            </div>
+
+            <!-- GNB Doors Detailed Section -->
+            <div id="gnb-doors-detail" class="company-detail active">
+                <div class="company-detail-header">
+                    <div class="company-detail-icon">🚪</div>
+                    <div>
+                        <h3>GNB Doors</h3>
+                        <p class="company-tagline">"We Never Leave A Door Open"</p>
+                    </div>
                 </div>
 
-                <!-- RWES -->
-                <div class="company-card">
-                    <div class="company-icon">🏗️</div>
-                    <h3>RWES Building Enclosures</h3>
-                    <p class="company-tagline">Reusable Weather Enclosure Systems</p>
-                    <p class="company-desc">Patented construction envelopes that protect job sites from weather and debris. Fast deployment, 99% weathertight seal, and OSHA fall protection compliance.</p>
-                    <ul class="company-features">
-                        <li>✓ 50-80% faster than tarps</li>
-                        <li>✓ Withstands 148 mph winds</li>
-                        <li>✓ 99% weather-tight seal</li>
-                        <li>✓ OSHA guardrail compliant</li>
-                        <li>✓ Reusable & sustainable (C2C Certified)</li>
-                    </ul>
-                    <p class="company-locations"><strong>Industries:</strong> Healthcare, Airports, Food Distribution, Public Works</p>
-                    <a href="https://rwes.group/" target="_blank" class="company-btn">Visit RWES →</a>
+                <div class="company-description">
+                    <h4>24/7 Commercial Overhead Door & Loading Dock Expert</h4>
+                    <p>GNB Doors delivers industry-leading commercial overhead door and loading dock services across Canada and North Texas. When your door won't close, dock leveler fails, or equipment breaks down—causing downtime and revenue loss—our certified technicians respond within hours with professional solutions.</p>
                 </div>
 
-                <!-- Supreme Tarps -->
-                <div class="company-card">
-                    <div class="company-icon">📦</div>
-                    <h3>Supreme Tarps</h3>
-                    <p class="company-tagline">Commercial-Grade Heavy Duty Tarps</p>
-                    <p class="company-desc">The strongest, toughest, most durable commercial-grade tarps available. Locally produced in the United States and Canada for industrial and commercial applications.</p>
-                    <ul class="company-features">
-                        <li>✓ Heavy-duty construction</li>
-                        <li>✓ UV & weather resistant</li>
-                        <li>✓ Made in USA & Canada</li>
-                        <li>✓ Custom sizes available</li>
-                        <li>✓ Industrial & commercial grade</li>
-                    </ul>
-                    <p class="company-locations"><strong>Coverage:</strong> North America-wide shipping</p>
-                    <a href="https://supremetarps.com/" target="_blank" class="company-btn">Visit Supreme Tarps →</a>
+                <div class="company-guarantee">
+                    <h4>🛡️ GNB Doors "Give A Sh!t Guarantee"</h4>
+                    <div class="guarantee-grid">
+                        <div class="guarantee-item">
+                            <strong>1-Hour Response</strong>
+                            <p>Guaranteed call-back within 1 hour of your contact</p>
+                        </div>
+                        <div class="guarantee-item">
+                            <strong>3-Hour On-Site</strong>
+                            <p>Service technician on-site within 3 hours (most areas)</p>
+                        </div>
+                        <div class="guarantee-item">
+                            <strong>Never Leave A Door Open</strong>
+                            <p>We will never leave your operation unsecured—door is down by end of day</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-services">
+                    <h4>Services & Solutions</h4>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-icon">🚪</span>
+                            <div>
+                                <strong>Commercial Overhead Doors</strong>
+                                <p>Industrial-grade overhead door installation, repair, and maintenance</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">📦</span>
+                            <div>
+                                <strong>Full View Aluminum Doors</strong>
+                                <p>Modern, durable aluminum entrance systems for warehouses and retail</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">🔥</span>
+                            <div>
+                                <strong>Fire-Rated Rolling Steel Doors</strong>
+                                <p>OSHA-compliant safety doors rated for extreme conditions</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">⚡</span>
+                            <div>
+                                <strong>High-Speed Doors</strong>
+                                <p>Fast-opening doors for high-traffic areas and climate control</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">🏪</span>
+                            <div>
+                                <strong>Loading Dock Equipment</strong>
+                                <p>Dock levelers, dock seals, shelters, and complete dock systems</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">🔧</span>
+                            <div>
+                                <strong>Preventative Maintenance</strong>
+                                <p>Regular service programs to prevent costly downtime</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-locations-detail">
+                    <h4>Service Locations</h4>
+                    <div class="locations-grid">
+                        <div class="location-group">
+                            <h5>Manitoba</h5>
+                            <ul>
+                                <li>Winnipeg</li>
+                                <li>Brandon</li>
+                                <li>Portage la Prairie</li>
+                                <li>Selkirk</li>
+                                <li>Winkler</li>
+                                <li>Steinbach</li>
+                            </ul>
+                        </div>
+                        <div class="location-group">
+                            <h5>Alberta</h5>
+                            <ul>
+                                <li>Edmonton & Central Alberta</li>
+                                <li>Red Deer</li>
+                                <li>Calgary & Southern Alberta</li>
+                                <li>Fort McMurray</li>
+                                <li>Plus 15+ outlying areas</li>
+                            </ul>
+                        </div>
+                        <div class="location-group">
+                            <h5>Dallas-Fort Worth (DFW)</h5>
+                            <ul>
+                                <li>Dallas & Arlington</li>
+                                <li>Fort Worth & Irving</li>
+                                <li>Plano & Lewisville</li>
+                                <li>Frisco & McKinney</li>
+                                <li>Entire DFW Metro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-brands">
+                    <h4>Top Brands We Service</h4>
+                    <p>Garaga • C.H.I. Overhead Doors • Pentalift • Hörmann • And more</p>
+                </div>
+
+                <div class="company-contact-cta">
+                    <p><strong>24/7 Emergency Service Available</strong></p>
+                    <p>📞 <a href="tel:+1-204-900-8635" class="contact-link">1-204-900-8635 (Canada)</a> | <a href="tel:+1-833-793-6963" class="contact-link">1-833-793-6963 (USA)</a></p>
+                    <p>📧 <a href="mailto:sales@gnbdoors.com" class="contact-link">sales@gnbdoors.com</a></p>
+                    <a href="https://www.gnbdoors.com/" target="_blank" class="company-btn">View Full GNB Doors Website →</a>
+                </div>
+            </div>
+
+            <!-- RWES Detailed Section -->
+            <div id="rwes-detail" class="company-detail">
+                <div class="company-detail-header">
+                    <div class="company-detail-icon">🏗️</div>
+                    <div>
+                        <h3>RWES</h3>
+                        <p class="company-tagline">Reusable Weather Enclosure Systems</p>
+                    </div>
+                </div>
+
+                <div class="company-description">
+                    <h4>Patented Construction Envelopes That Change How Projects Get Protected</h4>
+                    <p>RWES (Reusable Weather Enclosure Systems) are revolutionizing job site protection. These patented construction envelopes deliver fast installation, 99% weather-tight protection, fall prevention compliance, and incredible durability—withstanding winds up to 148 mph. Your team keeps working safely, comfortably, and efficiently, even in extreme conditions.</p>
+                </div>
+
+                <div class="company-solutions">
+                    <h4>RWES Solutions</h4>
+                    <div class="solutions-grid">
+                        <div class="solution-card">
+                            <h5>✅ RWES Standard</h5>
+                            <p>Temporary, reusable building envelope providing 99% protection from the elements. Easy to install on concrete, steel, or mass timber. Covers 15,000 sqft per day with a 4-person crew.</p>
+                        </div>
+                        <div class="solution-card">
+                            <h5>✅ RWES Guardwall</h5>
+                            <p>A patented guardrail enclosure system that exceeds OSHA 1910.29 safety requirements for fall protection while sealing your perimeter from weather and debris. Complete safety compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-advantages">
+                    <h4>Why Choose RWES?</h4>
+                    <div class="advantages-grid">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">⚡</div>
+                            <strong>50-80% Faster than Tarps</strong>
+                            <p>Time is money. RWES installs dramatically faster than traditional tarping or poly sheeting—more efficient crews, faster ROI.</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">💨</div>
+                            <strong>Extreme Wind Durability</strong>
+                            <p>Engineered to withstand 100+ mph winds with sustained wind resistance up to 148 mph. Proven in harsh weather.</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🌧️</div>
+                            <strong>99% Weather-Tight Seal</strong>
+                            <p>Keep your jobsite dry, safe, and protected from rain, snow, wind, and debris. True weathertight performance.</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🛡️</div>
+                            <strong>OSHA Fall Protection Compliant</strong>
+                            <p>RWES Guardwall exceeds OSHA 1910.29 guardrail requirements—no additional safety equipment needed.</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">♻️</div>
+                            <strong>Reusable & Sustainable</strong>
+                            <p>C2C Certified HDPE membrane reduces waste and supports sustainability goals. Use for years.</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">👷</div>
+                            <strong>Worker Safety & Comfort</strong>
+                            <p>Protected crews work safely and comfortably, leading to faster project completion and fewer safety incidents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-industries">
+                    <h4>Industries Using RWES</h4>
+                    <div class="industries-list">
+                        <span class="industry-badge">Healthcare</span>
+                        <span class="industry-badge">Airports</span>
+                        <span class="industry-badge">Food Distribution</span>
+                        <span class="industry-badge">Public Works</span>
+                        <span class="industry-badge">Construction</span>
+                        <span class="industry-badge">Data Centers</span>
+                    </div>
+                </div>
+
+                <div class="company-contact-cta">
+                    <p><strong>Schedule a Live Demo with Our RWES Team</strong></p>
+                    <p>A Business Development Manager will reach out in 24 business hours.</p>
+                    <p>📞 <a href="tel:+1-866-264-4713" class="contact-link">1-866-264-4713</a></p>
+                    <a href="https://rwes.group/" target="_blank" class="company-btn">View Full RWES Website →</a>
+                </div>
+            </div>
+
+            <!-- Supreme Tarps Detailed Section -->
+            <div id="supreme-tarps-detail" class="company-detail">
+                <div class="company-detail-header">
+                    <div class="company-detail-icon">📦</div>
+                    <div>
+                        <h3>Supreme Tarps</h3>
+                        <p class="company-tagline">Commercial-Grade Heavy Duty Tarps</p>
+                    </div>
+                </div>
+
+                <div class="company-description">
+                    <h4>The Strongest, Toughest, Most Durable Commercial Tarps Available</h4>
+                    <p>Supreme Tarps manufactures the strongest commercial-grade heavy-duty tarps for industrial and commercial applications. Locally produced in the United States and Canada, Supreme Tarps deliver maximum durability and reliability for demanding job sites and industries.</p>
+                </div>
+
+                <div class="company-features-detail">
+                    <h4>Supreme Tarps Features</h4>
+                    <div class="features-detail-grid">
+                        <div class="feature-detail">
+                            <span class="feature-icon">💪</span>
+                            <div>
+                                <strong>Heavy-Duty Construction</strong>
+                                <p>Built with premium materials for maximum strength and tear resistance</p>
+                            </div>
+                        </div>
+                        <div class="feature-detail">
+                            <span class="feature-icon">☀️</span>
+                            <div>
+                                <strong>UV & Weather Resistant</strong>
+                                <p>Withstands extreme sun exposure and harsh weather conditions year-round</p>
+                            </div>
+                        </div>
+                        <div class="feature-detail">
+                            <span class="feature-icon">🇺🇸🇨🇦</span>
+                            <div>
+                                <strong>Made in USA & Canada</strong>
+                                <p>Local manufacturing with direct support and fast shipping across North America</p>
+                            </div>
+                        </div>
+                        <div class="feature-detail">
+                            <span class="feature-icon">📐</span>
+                            <div>
+                                <strong>Custom Sizes Available</strong>
+                                <p>We create custom tarp solutions sized exactly for your unique needs</p>
+                            </div>
+                        </div>
+                        <div class="feature-detail">
+                            <span class="feature-icon">🏭</span>
+                            <div>
+                                <strong>Industrial & Commercial Grade</strong>
+                                <p>Engineered for demanding industrial, agricultural, and commercial applications</p>
+                            </div>
+                        </div>
+                        <div class="feature-detail">
+                            <span class="feature-icon">🚚</span>
+                            <div>
+                                <strong>North America-Wide Shipping</strong>
+                                <p>Fast, reliable shipping throughout the USA and Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-applications">
+                    <h4>Common Applications</h4>
+                    <div class="applications-list">
+                        <span class="app-badge">Equipment Protection</span>
+                        <span class="app-badge">Cargo Covers</span>
+                        <span class="app-badge">Construction Sites</span>
+                        <span class="app-badge">Agricultural Storage</span>
+                        <span class="app-badge">Industrial Covering</span>
+                        <span class="app-badge">Weather Protection</span>
+                        <span class="app-badge">Temporary Shelter</span>
+                        <span class="app-badge">Pool Covers</span>
+                    </div>
+                </div>
+
+                <div class="company-contact-cta">
+                    <p><strong>Get Your Custom Tarp Solution Today</strong></p>
+                    <p>North America-wide coverage with fast, reliable delivery</p>
+                    <a href="https://supremetarps.com/" target="_blank" class="company-btn">Visit Supreme Tarps Website →</a>
                 </div>
             </div>
         </div>
