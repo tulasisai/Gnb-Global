@@ -18,6 +18,8 @@
     padding: 0;
     box-sizing: border-box;
     outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-appearance: none;
 }
 
 html {
@@ -27,22 +29,32 @@ html {
 /* Remove all focus outlines */
 *:focus {
     outline: none !important;
+    box-shadow: none !important;
 }
 
 *:focus-visible {
     outline: none !important;
+    box-shadow: none !important;
 }
 
 *:active {
     outline: none !important;
+    box-shadow: none !important;
 }
 
 a, button, input, select, textarea {
     outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 a:focus, button:focus, input:focus, select:focus, textarea:focus {
     outline: none !important;
+    box-shadow: none !important;
+}
+
+a:active, button:active, input:active, select:active, textarea:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 body {
@@ -2612,7 +2624,9 @@ p {
 
     button:active,
     a:active {
-        opacity: 0.8;
+        opacity: 1;
+        background: none;
+        box-shadow: none !important;
     }
 }
 
