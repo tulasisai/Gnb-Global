@@ -2176,40 +2176,42 @@ p {
     }
 
     .projects-showcase {
-        padding: 60px 20px;
+        padding: 60px 0;
+        margin: 0 -20px;
     }
 
-    .showcase-carousel-wrapper {
-        gap: 0.5rem;
-    }
-
-    .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+    .projects-showcase .container {
+        padding: 0 !important;
     }
 
     .showcase-carousel-wrapper {
         gap: 0.25rem;
+        padding: 0 20px;
+        width: 100%;
+        overflow: visible;
     }
 
     .carousel-arrow {
         width: 35px;
         height: 35px;
         font-size: 18px;
+        flex-shrink: 0;
     }
 
     .showcase-carousel {
         height: auto;
         gap: 1rem;
+        width: 100%;
+        scroll-snap-type: x mandatory;
     }
 
     .showcase-item {
-        width: 95vw;
-        min-width: 95vw;
-        max-width: 95vw;
+        width: 90vw;
+        min-width: 90vw;
+        max-width: 90vw;
         height: auto;
         flex-direction: column;
+        scroll-snap-align: start;
     }
 
     .showcase-item .showcase-image {
