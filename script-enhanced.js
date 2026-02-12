@@ -1259,6 +1259,142 @@ function generateAssistantResponse(userMessage) {
         `;
     }
     
+    // FAQ - Tension Fabric Building
+    if (lowerMessage.includes('tension fabric') || lowerMessage.includes('what is') && lowerMessage.includes('building')) {
+        return `
+            <p><strong>❓ What is a Tension Fabric Building?</strong></p>
+            <p>A tension fabric building is a large clear-span structure featuring galvanized carbon steel frame trusses covered with engineered fabric membranes.</p>
+            <p><strong>Key Benefits:</strong></p>
+            <ul>
+                <li>✓ Quick installation (weeks, not months)</li>
+                <li>✓ Lower operational costs</li>
+                <li>✓ Energy savings</li>
+                <li>✓ Naturally bright interiors</li>
+                <li>✓ Flexible foundation options</li>
+                <li>✓ Superior corrosion resistance</li>
+            </ul>
+            <p><a href="#faq" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">View All FAQs →</a></p>
+        `;
+    }
+    
+    // FAQ - Installation Time
+    if (lowerMessage.includes('installation') || lowerMessage.includes('how long') || lowerMessage.includes('build time')) {
+        return `
+            <p><strong>⏱️ How Long Does Installation Take?</strong></p>
+            <p>Fabric buildings can be installed in <strong>weeks rather than months</strong>!</p>
+            <ul>
+                <li><strong>Spartan Series:</strong> 2-4 weeks</li>
+                <li><strong>Centurion Series:</strong> 3-6 weeks</li>
+                <li><strong>Custom Solutions:</strong> Custom timeline</li>
+            </ul>
+            <p><strong>How it works:</strong> Components are prefabricated off-site, shipped to your location, and assembled rapidly by our certified crews.</p>
+            <p><strong>Our Certifications:</strong> Avetta, ISNetworld, CSA A660, and COR - allowing us to work on North America's most rigorous job sites.</p>
+        `;
+    }
+    
+    // FAQ - Lifespan/Warranty
+    if (lowerMessage.includes('lifespan') || lowerMessage.includes('lifespan') || lowerMessage.includes('how long will') || lowerMessage.includes('warranty')) {
+        return `
+            <p><strong>🛡️ What's the Expected Lifespan?</strong></p>
+            <ul>
+                <li><strong>16-Year Warranty</strong> on fabric covers (our "Give A Sh!t Guarantee")</li>
+                <li><strong>Fabric membranes:</strong> Typically last 20-30+ years with proper maintenance</li>
+                <li><strong>Steel frame:</strong> Designed for 40+ years of service</li>
+            </ul>
+            <p><strong>5-Year Preventative Maintenance Program includes:</strong></p>
+            <ul>
+                <li>✓ Rigorous annual inspections</li>
+                <li>✓ 25% service discounts</li>
+                <li>✓ Immediate repairs to anchorage & fabric issues</li>
+            </ul>
+        `;
+    }
+    
+    // FAQ - Weather/Weatherproof
+    if (lowerMessage.includes('weatherproof') || lowerMessage.includes('weather') || lowerMessage.includes('rain') || lowerMessage.includes('wind')) {
+        return `
+            <p><strong>🌧️ Are These Buildings Weatherproof?</strong></p>
+            <p><strong>Absolutely!</strong> Our NovaShield® II HDPE membrane (manufactured in Nova Scotia, Canada) provides exceptional weather protection:</p>
+            <ul>
+                <li>✓ High wind resistance</li>
+                <li>✓ Heavy snow load capacity</li>
+                <li>✓ Rain protection</li>
+                <li>✓ UV exposure resistance</li>
+                <li>✓ Seismic activity handling</li>
+                <li>✓ Harsh climate durability</li>
+            </ul>
+            <p><strong>Standards Met:</strong> Tier III & Tier IV for mission-critical applications</p>
+        `;
+    }
+    
+    // FAQ - Relocation/Flexibility
+    if (lowerMessage.includes('relocate') || lowerMessage.includes('move') || lowerMessage.includes('expand') || lowerMessage.includes('flexibility')) {
+        return `
+            <p><strong>🔄 Can I Relocate a Fabric Building?</strong></p>
+            <p><strong>Yes!</strong> Flexibility is a key advantage of tension fabric buildings.</p>
+            <ul>
+                <li>✓ Can be expanded with minimal downtime</li>
+                <li>✓ Relocated to new locations</li>
+                <li>✓ Reconfigured for new uses</li>
+                <li>✓ Ideal for temporary facilities</li>
+                <li>✓ Perfect for disaster recovery sites</li>
+            </ul>
+            <p><strong>Added Benefit:</strong> The modular design allows for rapid disassembly, transportation, and reassembly while maintaining structural integrity.</p>
+        `;
+    }
+    
+    // FAQ - Maintenance Costs
+    if (lowerMessage.includes('maintenance') || lowerMessage.includes('maintenance cost') || lowerMessage.includes('cost savings')) {
+        return `
+            <p><strong>💰 What About Maintenance Costs?</strong></p>
+            <p>Maintenance is <strong>minimal compared to traditional structures</strong>.</p>
+            <ul>
+                <li>✓ Overall construction costs can be <strong>up to 30% less</strong></li>
+                <li>✓ Lower operational expenses</li>
+                <li>✓ Energy-efficient design</li>
+            </ul>
+            <p><strong>5-Year Preventative Maintenance Program:</strong></p>
+            <ul>
+                <li>✓ Annual inspections at 25% discount</li>
+                <li>✓ Immediate repairs to anchorage & fabric</li>
+                <li>✓ Full or partial fabric replacements available</li>
+            </ul>
+        `;
+    }
+    
+    // FAQ - Service Other Manufacturers
+    if (lowerMessage.includes('service') && lowerMessage.includes('other') || lowerMessage.includes('competitor')) {
+        return `
+            <p><strong>🔧 Do You Service Buildings from Other Manufacturers?</strong></p>
+            <p><strong>Absolutely!</strong> GNB Global offers industry-leading service for ANY manufacturer:</p>
+            <ul>
+                <li>✓ Guard-All buildings</li>
+                <li>✓ Clearspan structures</li>
+                <li>✓ Cover-All systems</li>
+                <li>✓ Any other fabric building</li>
+            </ul>
+            <p><strong>Our Services:</strong> Routine maintenance, emergency repairs, and complete fabric cover replacements.</p>
+            <p><strong>Certified Teams:</strong> Expertise for North America's most demanding job sites.</p>
+        `;
+    }
+    
+    // FAQ - Permits/Certifications
+    if (lowerMessage.includes('permit') || lowerMessage.includes('certification') || lowerMessage.includes('compliance')) {
+        return `
+            <p><strong>📋 What About Permits and Certifications?</strong></p>
+            <p><strong>GNB Global Certifications:</strong></p>
+            <ul>
+                <li>✓ Avetta Member</li>
+                <li>✓ ComplyWorks Certified</li>
+                <li>✓ CSA A660 Certified</li>
+                <li>✓ ISNetworld Certified</li>
+                <li>✓ COR Workplace Safety Certificate</li>
+            </ul>
+            <p><strong>What This Means:</strong> Our teams can work on North America's most rigorous construction sites.</p>
+            <p><strong>Engineering Support:</strong> Complete documentation for permits and full compliance with local building codes.</p>
+        `;
+    }
+    
     // Default response
     return `
         <p>Great question! I can help you with:</p>
@@ -1266,7 +1402,7 @@ function generateAssistantResponse(userMessage) {
             <li>🎯 Finding the right building solution</li>
             <li>📊 Comparing product series</li>
             <li>🏢 Information about our companies</li>
-            <li>💬 Answers to common questions</li>
+            <li>❓ Answers to common questions (FAQs)</li>
             <li>📞 Scheduling a consultation</li>
         </ul>
         <p><strong>What would you like to explore?</strong></p>
