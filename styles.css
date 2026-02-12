@@ -355,7 +355,7 @@ p {
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(15, 36, 54, 0.7) 0%, rgba(26, 58, 82, 0.7) 50%, rgba(13, 42, 63, 0.7) 100%), url('bg1.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(15, 36, 54, 0.7) 0%, rgba(26, 58, 82, 0.7) 50%, rgba(13, 42, 63, 0.7) 100%), url('MicrosoftTeams-image.png') center/cover no-repeat;
     background-attachment: fixed;
     color: var(--white);
     padding: 80px 20px 0;
