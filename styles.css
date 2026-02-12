@@ -68,6 +68,7 @@ body {
     background-color: var(--white);
     overflow-x: hidden;
     width: 100%;
+    padding-top: 70px;
 }
 
 .container {
@@ -130,8 +131,11 @@ p {
 .navbar {
     background: #ffffff;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
     border-bottom: 3px solid var(--secondary-color);
     padding: 0 20px;
