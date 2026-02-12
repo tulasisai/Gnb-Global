@@ -1486,57 +1486,6 @@
     }
     </script>
 
-    <!-- Company Type Selection Modal -->
-    <div id="companyTypeModal" class="company-type-modal" onclick="if(event.target.id === 'companyTypeModal') closeCompanyTypeModal();">
-        <div class="company-type-content">
-            <button class="company-type-close" type="button" onclick="document.getElementById('companyTypeModal').classList.remove('active'); document.body.style.overflow = 'auto'; return false;">&times;</button>
-            <h2>Help us customize your experience</h2>
-            <p>What type of company do you work for?</p>
-            
-            <div class="company-type-grid">
-                <div class="company-type-card" onclick="selectCompanyType('general-contractor')">
-                    <div class="company-type-icon">🏗️</div>
-                    <h3>General Contractor</h3>
-                </div>
-                
-                <div class="company-type-card" onclick="selectCompanyType('owner-developer')">
-                    <div class="company-type-icon">🏢</div>
-                    <h3>Owner or Developer</h3>
-                </div>
-                
-                <div class="company-type-card" onclick="selectCompanyType('specialty-contractor')">
-                    <div class="company-type-icon">🔧</div>
-                    <h3>Specialty Contractor</h3>
-                </div>
-                
-                <div class="company-type-card" onclick="selectCompanyType('government')">
-                    <div class="company-type-icon">🏛️</div>
-                    <h3>Government</h3>
-                </div>
-            </div>
-            
-            <p class="company-type-skip"><a href="javascript:void(0);" onclick="document.getElementById('companyTypeModal').classList.remove('active'); document.body.style.overflow = 'auto'; return false;">Not sure? Continue anyway</a></p>
-        </div>
-    </div>
-
-    <!-- Initialize Company Type Modal -->
-    <script>
-        // Show modal when page loads
-        window.addEventListener('load', () => {
-            console.log('Page load event fired');
-            setTimeout(() => {
-                const modal = document.getElementById('companyTypeModal');
-                if (modal) {
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                    console.log('Modal displayed');
-                } else {
-                    console.error('Modal not found');
-                }
-            }, 1000);
-        });
-    </script>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

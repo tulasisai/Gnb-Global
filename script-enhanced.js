@@ -24,72 +24,6 @@ window.toggleFAQ = function(button) {
     }
 };
 
-// ==================== COMPANY TYPE SELECTION MODAL ====================
-function showCompanyTypeModal() {
-    console.log('showCompanyTypeModal called');
-    const modal = document.getElementById('companyTypeModal');
-    console.log('Modal element:', modal);
-    if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        console.log('Modal shown, classes:', modal.className);
-    } else {
-        console.error('Modal element not found!');
-    }
-}
-
-function closeCompanyTypeModal() {
-    console.log('closeCompanyTypeModal called');
-    const modal = document.getElementById('companyTypeModal');
-    console.log('Closing modal:', modal);
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-        console.log('Modal closed');
-    }
-}
-
-function selectCompanyType(type) {
-    console.log('Selected company type:', type);
-    // Store the selection in localStorage
-    localStorage.setItem('userCompanyType', type);
-    // Close the modal
-    const modal = document.getElementById('companyTypeModal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// Show modal when page loads (after 2 seconds)
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Page loaded, will show company type modal');
-    
-    // Show modal after 2 seconds
-    setTimeout(() => {
-        console.log('Attempting to show company type modal');
-        showCompanyTypeModal();
-    }, 2000);
-    
-    // Close modal when clicking outside
-    const modal = document.getElementById('companyTypeModal');
-    console.log('Modal element found:', modal ? 'yes' : 'no');
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeCompanyTypeModal();
-            }
-        });
-    }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeCompanyTypeModal();
-        }
-    });
-});
-
 // FAQ functionality is defined at the top of this file
 
 // Contact form is already handled in script.js
@@ -740,25 +674,7 @@ window.toggleFAQ = toggleFAQ;
 window.isValidEmail = isValidEmail;
 window.openProductModal = openProductModal;
 window.closeProductModal = closeProductModal;
-window.showCompanyTypeModal = showCompanyTypeModal;
-window.closeCompanyTypeModal = closeCompanyTypeModal;
-window.selectCompanyType = selectCompanyType;
 
-// Initialize company type modal on page load
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('Initializing company type modal...');
-        setTimeout(() => {
-            showCompanyTypeModal();
-        }, 2000);
-    });
-} else {
-    // Page is already loaded
-    console.log('Page already loaded, showing modal immediately');
-    setTimeout(() => {
-        showCompanyTypeModal();
-    }, 500);
-}
 // ==================== MOBILE OPTIMIZATION ====================
 
 // Detect if user is on mobile device
