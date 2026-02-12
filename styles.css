@@ -2110,10 +2110,12 @@ p {
         overflow: hidden;
         transition: max-height 0.3s ease;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
-        max-height: 500px;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .nav-menu li {
