@@ -1187,6 +1187,23 @@ function generateAssistantResponse(userMessage) {
         `;
     }
     
+    // Why Choose GNB
+    if (lowerMessage.includes('why') || lowerMessage.includes('advantage') || lowerMessage.includes('benefit')) {
+        return `
+            <p><strong>✓ Why Choose GNB Global?</strong></p>
+            <ul>
+                <li><strong>16 Years Experience</strong> - 250+ landmark projects completed</li>
+                <li><strong>250+ Projects Delivered</strong> - Trusted by Fortune 500 companies & government agencies</li>
+                <li><strong>50+ Partners Worldwide</strong> - Global reach, local expertise</li>
+                <li><strong>16-Year Warranty</strong> - Full coverage on all buildings</li>
+                <li><strong>Expert Engineering</strong> - Custom solutions for any project size</li>
+                <li><strong>Fast Installation</strong> - 2-6 weeks depending on series</li>
+                <li><strong>Industry Leaders</strong> - Trusted by Tesla, Rivian, US Military, USAF & more</li>
+            </ul>
+            <p><strong>Our Guarantee:</strong> Maximum space, minimal cost, rapid deployment. <a href="#why-gnb" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Learn More →</a></p>
+        `;
+    }
+    
     // Default response
     return `
         <p>Great question! I can help you with:</p>
