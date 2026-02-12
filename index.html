@@ -1537,6 +1537,61 @@
         </div>
     </footer>
 
+    <!-- Solution Finder Assistant Widget -->
+    <div class="assistant-widget" id="assistantWidget">
+        <!-- Assistant Toggle Button -->
+        <button class="assistant-toggle" id="assistantToggle" title="Solution Finder Assistant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+
+        <!-- Assistant Chat Window -->
+        <div class="assistant-chat" id="assistantChat">
+            <div class="assistant-header">
+                <div class="assistant-title">
+                    <h3>Solution Finder</h3>
+                    <p>How can I help you today?</p>
+                </div>
+                <button class="assistant-close" id="assistantClose">×</button>
+            </div>
+
+            <div class="assistant-messages" id="assistantMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>👋 Welcome to GNB Global! I'm your Solution Finder assistant. I can help you:</p>
+                        <ul class="quick-links">
+                            <li>🏗️ <strong>Find the right building solution</strong> for your needs</li>
+                            <li>📊 <strong>Compare product series</strong> (Spartan, Centurion, Custom)</li>
+                            <li>🏢 <strong>Learn about GNB companies</strong> (Doors, RWES, Tarps)</li>
+                            <li>💬 <strong>Answer FAQs</strong> about our services</li>
+                            <li>📞 <strong>Schedule a consultation</strong> with our experts</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">What can I help you with?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assistant-input-area">
+                <div class="quick-actions">
+                    <button class="quick-action-btn" onclick="assistantHandleAction('find-solution')">🎯 Find Solution</button>
+                    <button class="quick-action-btn" onclick="assistantHandleAction('compare')">📊 Compare</button>
+                    <button class="quick-action-btn" onclick="assistantHandleAction('companies')">🏢 Companies</button>
+                    <button class="quick-action-btn" onclick="assistantHandleAction('consult')">📞 Consult</button>
+                </div>
+                <div class="assistant-input">
+                    <input type="text" id="assistantInput" placeholder="Ask me anything..." class="assistant-text-input">
+                    <button class="assistant-send" id="assistantSend" onclick="assistantSendMessage()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script src="script-enhanced.js"></script>
 </body>

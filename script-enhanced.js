@@ -904,3 +904,303 @@ const setupNetworkOptimization = () => {
 };
 
 setupNetworkOptimization();
+
+/* ==================== SOLUTION FINDER ASSISTANT ==================== */
+
+let assistantState = {
+    isOpen: false,
+    conversationHistory: []
+};
+
+// Initialize assistant when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    const assistantToggle = document.getElementById('assistantToggle');
+    const assistantClose = document.getElementById('assistantClose');
+    const assistantSend = document.getElementById('assistantSend');
+    const assistantInput = document.getElementById('assistantInput');
+
+    if (assistantToggle) {
+        assistantToggle.addEventListener('click', toggleAssistantChat);
+    }
+    if (assistantClose) {
+        assistantClose.addEventListener('click', closeAssistantChat);
+    }
+    if (assistantSend) {
+        assistantSend.addEventListener('click', assistantSendMessage);
+    }
+    if (assistantInput) {
+        assistantInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                assistantSendMessage();
+            }
+        });
+    }
+});
+
+function toggleAssistantChat() {
+    const assistantChat = document.getElementById('assistantChat');
+    const assistantToggle = document.getElementById('assistantToggle');
+    
+    if (assistantState.isOpen) {
+        closeAssistantChat();
+    } else {
+        assistantChat.classList.add('active');
+        assistantToggle.style.display = 'none';
+        assistantState.isOpen = true;
+        document.getElementById('assistantInput').focus();
+    }
+}
+
+function closeAssistantChat() {
+    const assistantChat = document.getElementById('assistantChat');
+    const assistantToggle = document.getElementById('assistantToggle');
+    
+    assistantChat.classList.remove('active');
+    assistantToggle.style.display = 'flex';
+    assistantState.isOpen = false;
+}
+
+function assistantSendMessage() {
+    const input = document.getElementById('assistantInput');
+    const message = input.value.trim();
+    
+    if (!message) return;
+    
+    // Add user message
+    addAssistantMessage(message, 'user');
+    input.value = '';
+    
+    // Store in history
+    assistantState.conversationHistory.push({ role: 'user', content: message });
+    
+    // Simulate processing delay
+    setTimeout(() => {
+        const response = generateAssistantResponse(message);
+        addAssistantMessage(response, 'bot');
+        assistantState.conversationHistory.push({ role: 'bot', content: response });
+    }, 600);
+}
+
+function addAssistantMessage(text, sender) {
+    const messagesContainer = document.getElementById('assistantMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${sender}-message`;
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'message-content';
+    contentDiv.innerHTML = text;
+    
+    messageDiv.appendChild(contentDiv);
+    messagesContainer.appendChild(messageDiv);
+    
+    // Scroll to bottom
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function assistantHandleAction(action) {
+    const input = document.getElementById('assistantInput');
+    let query = '';
+    
+    switch(action) {
+        case 'find-solution':
+            query = 'Help me find the right building solution';
+            break;
+        case 'compare':
+            query = 'Compare the different product series';
+            break;
+        case 'companies':
+            query = 'Tell me about GNB companies';
+            break;
+        case 'consult':
+            query = 'I want to schedule a consultation';
+            break;
+    }
+    
+    input.value = query;
+    assistantSendMessage();
+}
+
+function generateAssistantResponse(userMessage) {
+    const lowerMessage = userMessage.toLowerCase();
+    
+    // Solution Finder Responses
+    if (lowerMessage.includes('solution') || lowerMessage.includes('building')) {
+        if (lowerMessage.includes('small') || lowerMessage.includes('storage') || lowerMessage.includes('agricultural')) {
+            return `
+                <p><strong>✓ Spartan Series</strong> is perfect for you!</p>
+                <ul>
+                    <li><strong>Width:</strong> 32-100 feet</li>
+                    <li><strong>Best For:</strong> Storage, agricultural, material handling</li>
+                    <li><strong>Install Time:</strong> 2-4 weeks</li>
+                    <li><strong>Warranty:</strong> 16 years</li>
+                </ul>
+                <p><strong>Ready to learn more?</strong> <a href="#products" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">View Products →</a></p>
+            `;
+        } else if (lowerMessage.includes('large') || lowerMessage.includes('commercial') || lowerMessage.includes('mining')) {
+            return `
+                <p><strong>✓ Centurion Series</strong> is your match!</p>
+                <ul>
+                    <li><strong>Width:</strong> 40-150+ feet</li>
+                    <li><strong>Best For:</strong> Commercial, mining, heavy manufacturing</li>
+                    <li><strong>Install Time:</strong> 3-6 weeks</li>
+                    <li><strong>Warranty:</strong> 16 years</li>
+                </ul>
+                <p><strong>Compare with other series:</strong> <a href="#comparison" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">See Comparison →</a></p>
+            `;
+        } else if (lowerMessage.includes('custom') || lowerMessage.includes('military') || lowerMessage.includes('data center') || lowerMessage.includes('aerospace')) {
+            return `
+                <p><strong>✓ Custom Solutions</strong> - Perfect for specialized needs!</p>
+                <ul>
+                    <li><strong>Width:</strong> Up to 400+ feet</li>
+                    <li><strong>Best For:</strong> Military, data centers, aerospace</li>
+                    <li><strong>Custom:</strong> Fully engineered solutions</li>
+                    <li><strong>Warranty:</strong> 16 years</li>
+                </ul>
+                <p><strong>Get expert consultation:</strong> <a href="#contact" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Contact Us →</a></p>
+            `;
+        } else {
+            return `
+                <p>Great question! To recommend the best solution, tell me about your project:</p>
+                <ul>
+                    <li>What's the primary use? (storage, manufacturing, data center, etc.)</li>
+                    <li>What size building do you need?</li>
+                    <li>What industry are you in?</li>
+                </ul>
+                <p>Or <a href="#comparison" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">compare all three series →</a></p>
+            `;
+        }
+    }
+    
+    // Company Information
+    if (lowerMessage.includes('company') || lowerMessage.includes('companies') || lowerMessage.includes('doors') || lowerMessage.includes('rwes') || lowerMessage.includes('tarps')) {
+        if (lowerMessage.includes('doors')) {
+            return `
+                <p><strong>🚪 GNB Doors</strong> - 24/7 Commercial Overhead Doors & Loading Docks</p>
+                <ul>
+                    <li>Emergency response within 1 hour</li>
+                    <li>Technician on-site within 3 hours</li>
+                    <li>Service across Canada & North Texas</li>
+                    <li>24/7 availability guaranteed</li>
+                </ul>
+                <p><a href="#gnb-companies" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Learn More about GNB Doors →</a></p>
+            `;
+        } else if (lowerMessage.includes('rwes')) {
+            return `
+                <p><strong>🏗️ RWES</strong> - Reusable Weather Enclosure Systems</p>
+                <ul>
+                    <li>Patented construction envelopes</li>
+                    <li>99% weather-tight protection</li>
+                    <li>50-80% faster than tarps</li>
+                    <li>OSHA fall protection compliant</li>
+                </ul>
+                <p><a href="#gnb-companies" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Learn More about RWES →</a></p>
+            `;
+        } else if (lowerMessage.includes('tarp')) {
+            return `
+                <p><strong>📦 Supreme Tarps</strong> - Commercial-Grade Heavy Duty Tarps</p>
+                <ul>
+                    <li>Strongest commercial tarps available</li>
+                    <li>Locally manufactured (USA & Canada)</li>
+                    <li>Perfect for industrial applications</li>
+                    <li>North America-wide delivery</li>
+                </ul>
+                <p><a href="#gnb-companies" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Learn More about Supreme Tarps →</a></p>
+            `;
+        } else {
+            return `
+                <p><strong>GNB Global Companies:</strong></p>
+                <ul>
+                    <li>🚪 <strong>GNB Doors</strong> - Commercial overhead doors & loading docks</li>
+                    <li>🏗️ <strong>RWES</strong> - Weather enclosure systems</li>
+                    <li>📦 <strong>Supreme Tarps</strong> - Heavy-duty tarps</li>
+                </ul>
+                <p><a href="#gnb-companies" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">See All Companies →</a></p>
+            `;
+        }
+    }
+    
+    // Pricing/Cost
+    if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('quote')) {
+        return `
+            <p>Pricing for fabric buildings varies based on:</p>
+            <ul>
+                <li>Building size and specifications</li>
+                <li>Product series (Spartan, Centurion, or Custom)</li>
+                <li>Installation location</li>
+                <li>Customization requirements</li>
+            </ul>
+            <p><strong>Get a custom quote:</strong> <a href="#contact" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Contact Our Experts →</a></p>
+        `;
+    }
+    
+    // Warranty
+    if (lowerMessage.includes('warranty') || lowerMessage.includes('guarantee')) {
+        return `
+            <p><strong>All GNB Buildings Include:</strong></p>
+            <ul>
+                <li>✓ <strong>16-Year Warranty</strong></li>
+                <li>✓ Full coverage on fabric and structure</li>
+                <li>✓ Engineering support included</li>
+            </ul>
+            <p><strong>GNB Doors Guarantee:</strong> "Never Leave A Door Open" - Door secured by end of day or we make it right! 🛡️</p>
+        `;
+    }
+    
+    // Consultation
+    if (lowerMessage.includes('consult') || lowerMessage.includes('expert') || lowerMessage.includes('contact') || lowerMessage.includes('call')) {
+        return `
+            <p><strong>Ready to talk to an expert?</strong></p>
+            <ul>
+                <li>📞 Get a free consultation</li>
+                <li>📊 Custom quotes for your project</li>
+                <li>💡 Expert recommendations</li>
+            </ul>
+            <p><a href="#contact" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Schedule Consultation →</a></p>
+            <p><strong>Or call now for immediate assistance!</strong></p>
+        `;
+    }
+    
+    // Comparison
+    if (lowerMessage.includes('compare') || lowerMessage.includes('different') || lowerMessage.includes('series')) {
+        return `
+            <p><strong>Compare Our Three Product Series:</strong></p>
+            <ul>
+                <li><strong>Spartan:</strong> 32-100 ft (Storage, Agricultural)</li>
+                <li><strong>Centurion:</strong> 40-150+ ft (Commercial, Mining)</li>
+                <li><strong>Custom:</strong> Up to 400+ ft (Specialized Applications)</li>
+            </ul>
+            <p><a href="#comparison" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">View Full Comparison →</a></p>
+        `;
+    }
+    
+    // Projects/Portfolio
+    if (lowerMessage.includes('project') || lowerMessage.includes('portfolio') || lowerMessage.includes('example')) {
+        return `
+            <p><strong>GNB Global has completed 250+ landmark projects:</strong></p>
+            <ul>
+                <li>🏢 Data Centers (Eagle Mountain)</li>
+                <li>✈️ Military Hangars (Robins AFB, Naval Bases)</li>
+                <li>⛏️ Mining Facilities</li>
+                <li>🏭 Industrial Storage</li>
+            </ul>
+            <p><a href="#projects-showcase" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">View Our Projects →</a></p>
+        `;
+    }
+    
+    // Default response
+    return `
+        <p>Great question! I can help you with:</p>
+        <ul>
+            <li>🎯 Finding the right building solution</li>
+            <li>📊 Comparing product series</li>
+            <li>🏢 Information about our companies</li>
+            <li>💬 Answers to common questions</li>
+            <li>📞 Scheduling a consultation</li>
+        </ul>
+        <p><strong>What would you like to explore?</strong></p>
+    `;
+}
+
+// Make functions globally available
+window.assistantHandleAction = assistantHandleAction;
+window.assistantSendMessage = assistantSendMessage;
