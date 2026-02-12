@@ -1023,6 +1023,61 @@ function assistantHandleAction(action) {
 function generateAssistantResponse(userMessage) {
     const lowerMessage = userMessage.toLowerCase();
     
+    // Check for specific product series first
+    if (lowerMessage.includes('spartan')) {
+        return `
+            <p><strong>🏢 Spartan Series</strong> - Cost-Effective Tension Fabric Building</p>
+            <ul>
+                <li><strong>Width Range:</strong> 32-100 feet</li>
+                <li><strong>Leg Heights:</strong> 8′, 10′, 12′</li>
+                <li><strong>Truss Depths:</strong> 18", 24", 36"</li>
+                <li><strong>Installation Time:</strong> 2-4 weeks</li>
+                <li><strong>Lead Time:</strong> 4-8 weeks</li>
+                <li><strong>Warranty:</strong> 16 years</li>
+                <li><strong>Best For:</strong> Commodity & salt storage, material handling, agricultural applications</li>
+                <li><strong>Design Flexibility:</strong> Moderate</li>
+            </ul>
+            <p><strong>Perfect for:</strong> Small to medium projects with cost-effective requirements.</p>
+            <p><a href="#products" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">View Spartan Series →</a></p>
+        `;
+    }
+    
+    if (lowerMessage.includes('centurion')) {
+        return `
+            <p><strong>🏗️ Centurion Series</strong> - Premium Large-Scale Fabric Building</p>
+            <ul>
+                <li><strong>Width Range:</strong> 40-150+ feet</li>
+                <li><strong>Truss Depths:</strong> 36", 48"</li>
+                <li><strong>Installation Time:</strong> 3-6 weeks</li>
+                <li><strong>Lead Time:</strong> 6-10 weeks</li>
+                <li><strong>Warranty:</strong> 16 years</li>
+                <li><strong>Best For:</strong> Commercial applications, mining facilities, heavy manufacturing</li>
+                <li><strong>Design Flexibility:</strong> High</li>
+                <li><strong>Key Feature:</strong> Continuous segmented truss design for maximum flexibility</li>
+            </ul>
+            <p><strong>Perfect for:</strong> Large-scale projects requiring elevated clearances and high usable envelopes.</p>
+            <p><a href="#products" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">View Centurion Series →</a></p>
+        `;
+    }
+    
+    if (lowerMessage.includes('custom')) {
+        return `
+            <p><strong>⚙️ Custom Solutions</strong> - Fully Engineered Special Projects</p>
+            <ul>
+                <li><strong>Width Range:</strong> Up to 400+ feet</li>
+                <li><strong>Customization:</strong> Fully engineered solutions</li>
+                <li><strong>Installation Time:</strong> Custom timeline</li>
+                <li><strong>Lead Time:</strong> Custom timeline</li>
+                <li><strong>Warranty:</strong> 16 years</li>
+                <li><strong>Best For:</strong> Military applications, data centers, aerospace projects</li>
+                <li><strong>Design Flexibility:</strong> Unlimited</li>
+                <li><strong>Best Feature:</strong> Unconventional requirements? We engineer it!</li>
+            </ul>
+            <p><strong>Perfect for:</strong> Specialized and military-grade applications requiring custom engineering.</p>
+            <p><a href="#contact" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">Get Custom Quote →</a></p>
+        `;
+    }
+    
     // Solution Finder Responses
     if (lowerMessage.includes('solution') || lowerMessage.includes('building')) {
         if (lowerMessage.includes('small') || lowerMessage.includes('storage') || lowerMessage.includes('agricultural')) {
@@ -1047,7 +1102,7 @@ function generateAssistantResponse(userMessage) {
                 </ul>
                 <p><strong>Compare with other series:</strong> <a href="#comparison" style="color: #f57d1a; font-weight: 700; cursor: pointer; text-decoration: underline;">See Comparison →</a></p>
             `;
-        } else if (lowerMessage.includes('custom') || lowerMessage.includes('military') || lowerMessage.includes('data center') || lowerMessage.includes('aerospace')) {
+        } else if (lowerMessage.includes('military') || lowerMessage.includes('data center') || lowerMessage.includes('aerospace')) {
             return `
                 <p><strong>✓ Custom Solutions</strong> - Perfect for specialized needs!</p>
                 <ul>
