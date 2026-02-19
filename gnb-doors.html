@@ -332,13 +332,15 @@
         }
 
         .gnb-doors-hero .container {
-            position: relative;
+            position: absolute;
             z-index: 3;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            max-width: 450px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            max-width: none;
-            padding-left: 80px;
         }
 
         .hero-content {
@@ -570,12 +572,9 @@
                 padding: 80px 20px;
                 min-height: 500px;
             }
-
             .gnb-doors-hero .container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                padding-left: 20px;
-                justify-content: flex-start;
+                left: 20px;
+                max-width: calc(100% - 40px);
             }
 
             .hero-content {
