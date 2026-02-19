@@ -334,16 +334,15 @@
         .gnb-doors-hero .container {
             position: relative;
             z-index: 3;
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
             align-items: center;
-            justify-items: start;
-            max-width: 100%;
-            padding-left: 60px;
+            justify-content: flex-start;
+            max-width: none;
+            padding-left: 80px;
         }
 
         .hero-content {
-            max-width: 500px;
+            max-width: 450px;
         }
 
         .hero-content h1 {
@@ -576,6 +575,7 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 padding-left: 20px;
+                justify-content: flex-start;
             }
 
             .hero-content {
