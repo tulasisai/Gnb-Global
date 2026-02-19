@@ -2307,10 +2307,20 @@ p {
         width: 100%;
         text-align: left;
         margin: 0;
+        position: relative;
+        z-index: 10;
+        pointer-events: auto;
+        cursor: pointer;
     }
 
     .nav-menu a:active {
         background: var(--bg-light);
+    }
+
+    .nav-menu > li > a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
     }
 
     /* Mobile Dropdown - Handled in global media query above */
