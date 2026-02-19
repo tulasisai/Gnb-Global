@@ -2252,6 +2252,12 @@ p {
         color: #1f2937 !important;
     }
 
+    /* Override the global dropdown-menu a styles for mobile */
+    .nav-dropdown .dropdown-menu a {
+        color: #1f2937 !important;
+        background: #f5f5f5 !important;
+    }
+
     /* Force dropdown text to be dark - override all parent styles */
     .nav-dropdown.active .dropdown-menu a,
     .nav-dropdown.active .dropdown-menu a:hover,
@@ -2262,6 +2268,7 @@ p {
 
     .nav-dropdown.active .dropdown-menu a:hover {
         background: #efefef !important;
+        color: #1f2937 !important;
     }
 
     .dropdown-arrow {
@@ -2593,12 +2600,23 @@ p {
         color: #1f2937 !important;
     }
 
+    /* Override the global dropdown-menu a styles for mobile */
+    .nav-dropdown .dropdown-menu a {
+        color: #1f2937 !important;
+        background: #f5f5f5 !important;
+    }
+
     /* Force dropdown text to be dark - override all parent styles */
     .nav-dropdown.active .dropdown-menu a,
     .nav-dropdown.active .dropdown-menu a:hover,
     .nav-dropdown.active .dropdown-menu a:active {
         color: #1f2937 !important;
         background: #fafafa !important;
+    }
+
+    .nav-dropdown.active .dropdown-menu a:hover {
+        background: #efefef !important;
+        color: #1f2937 !important;
     }
 
     .nav-dropdown.active .dropdown-menu a:hover {
