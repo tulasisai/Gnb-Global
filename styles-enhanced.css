@@ -1332,17 +1332,19 @@ textarea:focus {
 /* Chat Window */
 .assistant-chat {
     display: none;
-    position: absolute;
-    bottom: 80px;
-    right: 0;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
     width: 380px;
-    height: 600px;
+    max-height: 600px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
     flex-direction: column;
     animation: slideUp 0.3s ease-out;
     overflow: hidden;
+    z-index: 1001;
+    max-width: calc(100vw - 50px);
 }
 
 .assistant-chat.active {
@@ -1595,11 +1597,46 @@ textarea:focus {
 }
 
 /* Mobile Responsive */
+@media (max-width: 768px) {
+    .assistant-chat {
+        width: 90vw;
+        max-width: calc(100vw - 40px);
+        height: auto;
+        max-height: 65vh;
+        bottom: 85px;
+        right: 20px;
+        left: auto;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .message-content {
+        max-width: 90%;
+    }
+}
+
 @media (max-width: 480px) {
     .assistant-chat {
-        width: calc(100vw - 30px);
-        height: 70vh;
-        max-height: 600px;
+        width: 95vw;
+        max-width: calc(100vw - 30px);
+        height: auto;
+        max-height: 60vh;
+        bottom: 80px;
+        right: 15px;
+        left: auto;
+        border-radius: 8px;
+    }
+
+    .assistant-widget {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .assistant-toggle {
+        width: 55px;
+        height: 55px;
     }
 
     .quick-actions {
@@ -1608,5 +1645,14 @@ textarea:focus {
 
     .message-content {
         max-width: 90%;
+    }
+
+    .assistant-input-area {
+        padding: 10px 14px;
+    }
+
+    .assistant-text-input {
+        padding: 8px 10px;
+        font-size: 0.9rem;
     }
 }
