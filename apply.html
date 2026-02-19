@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <meta name="description" content="GNB Global application form for job candidates.">
+    <meta name="keywords" content="GNB Global application, job application, careers">
+    <meta name="author" content="GNB Global">
+    <meta name="theme-color" content="#1a3a52">
+
+    <title>GNB Global Application</title>
+
+    <link rel="icon" type="image/svg+xml" href="GNB-Group-logo-155x100-1.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="GNB-Group-logo-155x100-1.svg">
+    <link rel="apple-touch-icon" href="GNB-Group-logo-155x100-1.svg">
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
+    <link rel="canonical" href="https://tulasisai.github.io/Gnb-Global/apply.html">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-enhanced.css">
+
+    <style>
+        .apply-hero {
+            background: linear-gradient(135deg, rgba(15, 36, 54, 0.95) 0%, rgba(26, 58, 82, 0.9) 55%, rgba(13, 42, 63, 0.9) 100%);
+            color: var(--white);
+            padding: 70px 20px 60px;
+            text-align: center;
+        }
+
+        .apply-hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+        }
+
+        .apply-hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .apply-section {
+            padding: 70px 20px;
+            background: #f6f8fb;
+        }
+
+        .apply-card {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(26, 58, 82, 0.08);
+        }
+
+        .form-section {
+            margin-bottom: 32px;
+        }
+
+        .form-section h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid rgba(26, 58, 82, 0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .helper-text {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+
+        .form-note {
+            background: rgba(26, 58, 82, 0.04);
+            border-radius: 12px;
+            padding: 16px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .signature-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .submit-row {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .apply-card {
+                padding: 28px;
+            }
+
+            .apply-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="GNB-Group-logo-155x100-1.svg" alt="GNB Global Logo" class="logo-img">
+                    Global
+                </a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="careers.html#current-openings">Current Openings</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="apply-hero">
+        <div class="container">
+            <h1>GNB Global Application</h1>
+            <p>Please fill out the form below to submit your job application.</p>
+        </div>
+    </section>
+
+    <section class="apply-section">
+        <div class="apply-card">
+            <form action="#" method="post">
+                <div class="form-section">
+                    <h2>Applicant Information</h2>
+                    <div class="form-grid">
+                        <div>
+                            <label for="first-name">Name*</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        </div>
+                        <div>
+                            <label for="last-name">&nbsp;</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                        </div>
+                        <div>
+                            <label for="address-1">Address*</label>
+                            <input type="text" id="address-1" name="address-1" placeholder="Street Address" required>
+                        </div>
+                        <div>
+                            <label for="address-2">&nbsp;</label>
+                            <input type="text" id="address-2" name="address-2" placeholder="Street Address Line 2">
+                        </div>
+                        <div>
+                            <label for="city">City*</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div>
+                            <label for="state">State / Province*</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div>
+                            <label for="postal">Postal / Zip Code*</label>
+                            <input type="text" id="postal" name="postal" required>
+                        </div>
+                        <div>
+                            <label for="dob">Date of Birth*</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div>
+                            <label for="start-date">Date Available to Start Work*</label>
+                            <input type="date" id="start-date" name="start-date" required>
+                        </div>
+                        <div>
+                            <label for="email">E-mail*</label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+                        </div>
+                        <div>
+                            <label for="position">Applied Position*</label>
+                            <input type="text" id="position" name="position" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Eligibility</h2>
+                    <div class="form-grid">
+                        <div>
+                            <label for="authorized">Are you legally authorized to work in the United States?*</label>
+                            <select id="authorized" name="authorized" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="worked-before">Have you ever worked for this company?*</label>
+                            <select id="worked-before" name="worked-before" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="worked-when">If yes, when?</label>
+                            <input type="date" id="worked-when" name="worked-when">
+                        </div>
+                        <div>
+                            <label for="referred">Were you referred by someone who works at GNB? If so who?*</label>
+                            <input type="text" id="referred" name="referred" required>
+                        </div>
+                        <div>
+                            <label for="convicted">Have you ever been convicted of a felony or misdemeanor?*</label>
+                            <select id="convicted" name="convicted" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="indictment">Are you currently under indictment, on probation, or parole?*</label>
+                            <select id="indictment" name="indictment" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Cover Letter</h2>
+                    <label for="cover-letter">Please do not exceed 200 words.</label>
+                    <textarea id="cover-letter" name="cover-letter" maxlength="1200"></textarea>
+                    <p class="helper-text">Tip: Keep this under 200 words.</p>
+                </div>
+
+                <div class="form-section">
+                    <h2>Uploads</h2>
+                    <div class="form-grid">
+                        <div>
+                            <label for="resume">Upload Resume</label>
+                            <input type="file" id="resume" name="resume">
+                        </div>
+                        <div>
+                            <label for="documents">Any Other Documents to Upload</label>
+                            <input type="file" id="documents" name="documents" multiple>
+                            <p class="helper-text">You can share certificates, diplomas, etc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Employment History</h2>
+                    <div class="form-note">Employer #1</div>
+                    <div class="form-grid">
+                        <div>
+                            <label for="employer-1-name">Employer Name</label>
+                            <input type="text" id="employer-1-name" name="employer-1-name">
+                        </div>
+                        <div>
+                            <label for="employer-1-position">Position Held</label>
+                            <input type="text" id="employer-1-position" name="employer-1-position">
+                        </div>
+                        <div>
+                            <label for="employer-1-dates">Start Date and End Date</label>
+                            <input type="text" id="employer-1-dates" name="employer-1-dates" placeholder="MM-YYYY to MM-YYYY">
+                        </div>
+                        <div>
+                            <label for="employer-1-reason">Reason for Leaving</label>
+                            <input type="text" id="employer-1-reason" name="employer-1-reason">
+                        </div>
+                        <div>
+                            <label for="employer-1-responsibilities">Primary Responsibilities</label>
+                            <textarea id="employer-1-responsibilities" name="employer-1-responsibilities"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-note" style="margin-top: 20px;">Employer #2</div>
+                    <div class="form-grid">
+                        <div>
+                            <label for="employer-2-name">Employer Name</label>
+                            <input type="text" id="employer-2-name" name="employer-2-name">
+                        </div>
+                        <div>
+                            <label for="employer-2-position">Position Held</label>
+                            <input type="text" id="employer-2-position" name="employer-2-position">
+                        </div>
+                        <div>
+                            <label for="employer-2-dates">Start Date and End Date</label>
+                            <input type="text" id="employer-2-dates" name="employer-2-dates" placeholder="MM-YYYY to MM-YYYY">
+                        </div>
+                        <div>
+                            <label for="employer-2-reason">Reason for Leaving</label>
+                            <input type="text" id="employer-2-reason" name="employer-2-reason">
+                        </div>
+                        <div>
+                            <label for="employer-2-responsibilities">Primary Responsibilities</label>
+                            <textarea id="employer-2-responsibilities" name="employer-2-responsibilities"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-note" style="margin-top: 20px;">Employer #3</div>
+                    <div class="form-grid">
+                        <div>
+                            <label for="employer-3-name">Employer Name</label>
+                            <input type="text" id="employer-3-name" name="employer-3-name">
+                        </div>
+                        <div>
+                            <label for="employer-3-position">Position Held</label>
+                            <input type="text" id="employer-3-position" name="employer-3-position">
+                        </div>
+                        <div>
+                            <label for="employer-3-dates">Start Date and End Date</label>
+                            <input type="text" id="employer-3-dates" name="employer-3-dates" placeholder="MM-YYYY to MM-YYYY">
+                        </div>
+                        <div>
+                            <label for="employer-3-reason">Reason for Leaving</label>
+                            <input type="text" id="employer-3-reason" name="employer-3-reason">
+                        </div>
+                        <div>
+                            <label for="employer-3-responsibilities">Primary Responsibilities</label>
+                            <textarea id="employer-3-responsibilities" name="employer-3-responsibilities"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-note" style="margin-top: 20px;">Employer #4</div>
+                    <div class="form-grid">
+                        <div>
+                            <label for="employer-4-name">Employer Name</label>
+                            <input type="text" id="employer-4-name" name="employer-4-name">
+                        </div>
+                        <div>
+                            <label for="employer-4-position">Position Held</label>
+                            <input type="text" id="employer-4-position" name="employer-4-position">
+                        </div>
+                        <div>
+                            <label for="employer-4-dates">Start Date and End Date</label>
+                            <input type="text" id="employer-4-dates" name="employer-4-dates" placeholder="MM-YYYY to MM-YYYY">
+                        </div>
+                        <div>
+                            <label for="employer-4-reason">Reason for Leaving</label>
+                            <input type="text" id="employer-4-reason" name="employer-4-reason">
+                        </div>
+                        <div>
+                            <label for="employer-4-responsibilities">Primary Responsibilities</label>
+                            <textarea id="employer-4-responsibilities" name="employer-4-responsibilities"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Disclaimer and Signature</h2>
+                    <p class="form-note">I certify that my answers are true and complete to the best of my knowledge. If this application leads to employment, I understand that false or misleading information in my application or interview may result in termination.</p>
+                    <div class="signature-row" style="margin-top: 16px;">
+                        <div>
+                            <label for="signature">Signature*</label>
+                            <input type="text" id="signature" name="signature" required>
+                        </div>
+                        <div>
+                            <label for="signature-date">Date*</label>
+                            <input type="date" id="signature-date" name="signature-date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit-row">
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

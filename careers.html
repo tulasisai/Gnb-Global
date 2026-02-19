@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <meta name="description" content="GNB Global careers - build massive structures and bigger opportunities with a safety-first, hard-working crew.">
+    <meta name="keywords" content="GNB Global careers, construction jobs, fabric building installer, project manager, safety manager">
+    <meta name="author" content="GNB Global">
+    <meta name="theme-color" content="#1a3a52">
+
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tulasisai.github.io/Gnb-Global/careers.html">
+    <meta property="og:title" content="GNB Careers - Build Big, Grow Fast">
+    <meta property="og:description" content="Join the GNB Global crew. Big projects, strong teams, and real growth without red tape.">
+    <meta property="og:image" content="https://tulasisai.github.io/Gnb-Global/bg1.jpg">
+
+    <!-- Title -->
+    <title>GNB Careers - Build Big, Grow Fast</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="GNB-Group-logo-155x100-1.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="GNB-Group-logo-155x100-1.svg">
+    <link rel="apple-touch-icon" href="GNB-Group-logo-155x100-1.svg">
+
+    <!-- Sitemap for SEO -->
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tulasisai.github.io/Gnb-Global/careers.html">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-enhanced.css">
+
+    <style>
+        .careers-hero {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(15, 36, 54, 0.95) 0%, rgba(26, 58, 82, 0.92) 55%, rgba(13, 42, 63, 0.94) 100%);
+        }
+
+        .careers-hero .hero-overlay {
+            display: none;
+        }
+
+        .careers-intro {
+            max-width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 36px 40px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(26, 58, 82, 0.08);
+        }
+
+        .careers-intro h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .careers-intro p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .careers-section {
+            padding: 70px 20px;
+            background: var(--white);
+        }
+
+        .careers-section.alt {
+            background: #f6f8fb;
+        }
+
+        .careers-section .section-header {
+            margin-bottom: 40px;
+        }
+
+        .careers-section .section-header p {
+            max-width: 820px;
+            margin: 12px auto 0;
+            color: var(--text-light);
+        }
+
+        .benefits-grid,
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 22px 22px 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(26, 58, 82, 0.08);
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .perks-intro {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .apply-cta {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .job-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        .job-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .job-list li {
+            position: relative;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(26, 58, 82, 0.08);
+            color: var(--text-light);
+        }
+
+        .job-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .job-list li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .careers-intro h1 {
+                font-size: 2.1rem;
+            }
+
+            .careers-intro p {
+                font-size: 1rem;
+            }
+
+            .intro-card {
+                padding: 28px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="GNB-Group-logo-155x100-1.svg" alt="GNB Global Logo" class="logo-img">
+                    Global
+                </a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#why-gnb" class="dropdown-toggle">Why GNB <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#why-gnb">✓ Why Choose GNB</a></li>
+                            <li><a href="index.html#faq">❓ FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#gnb-companies" class="dropdown-toggle">GNB Companies <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gnb-doors.html">🚪 GNB Doors</a></li>
+                            <li><a href="rwes.html">🏗️ RWES Enclosures</a></li>
+                            <li><a href="index.html#supreme-tarps-detail">📦 Supreme Tarps</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#contact" class="dropdown-toggle">Contact <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#contact">📧 Contact Us</a></li>
+                            <li><a href="team.html">👥 Meet Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="careers.html" class="dropdown-toggle">GNB Careers <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#current-openings">💼 Current Openings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="careers-hero">
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section class="careers-section">
+        <div class="container careers-intro">
+            <div class="intro-card">
+                <h1>Build Massive Structures. Build Bigger Opportunities.</h1>
+                <p>At GNB, we build massive structures and even bigger opportunities. Our crew is made up of hardworking, straight-shooting people who care - about safety, about the project, and about each other. If you are ready to take on challenging work with a team that has your back, you are in the right place.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work Here -->
+    <section class="careers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Work Here</h2>
+                <p>Big builds, strong teams, and real growth without the red tape.</p>
+            </div>
+            <div class="reasons-grid">
+                <div class="info-card">
+                    <h3>✅ Big Projects, Bigger Impact</h3>
+                    <p>From data centers to mining sites, you will be part of projects people notice.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Crew Comfort Comes First</h3>
+                    <p>We build for safety and efficiency, and we do the same for our team.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Growth Without Red Tape</h3>
+                    <p>Learn on the job, grow with the crew, no endless layers of bureaucracy.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Culture That Cares</h3>
+                    <p>Straight shooters, strong teams, and leaders who still put boots on the ground.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Work Hard, Play Hard</h3>
+                    <p>Serious about the work, but not about ourselves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perks and Benefits -->
+    <section class="careers-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perks and Benefits</h2>
+            </div>
+            <p class="perks-intro">At GNB Global, we do not just offer jobs - we build careers worth showing up for. Here is what you can count on when you are part of the crew:</p>
+            <div class="benefits-grid">
+                <div class="info-card">
+                    <h3>✅ Competitive Pay with Real Growth Tracks</h3>
+                    <p>Earn strong wages today and know there is a clear path forward tomorrow.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Safety-First Culture</h3>
+                    <p>Gear stipends, proper training, and a no-compromise attitude - because going home safe is the only option.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Travel Opportunities</h3>
+                    <p>See major project sites across North America while working on some of the biggest builds out there.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Health and Dental Coverage</h3>
+                    <p>Region-appropriate benefits that keep you and your family covered.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Paid Time Off and Holidays</h3>
+                    <p>Recharge when you need it - we know balance matters.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Training, Certifications, and Upskilling</h3>
+                    <p>We invest in your skills so you can keep leveling up in your career.</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Team Events and Recognition</h3>
+                    <p>From jobsite shoutouts to crew events, we celebrate wins - big and small.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section class="careers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apply with Jobform</h2>
+                <p>Scan the QR code to apply quickly and securely.</p>
+            </div>
+            <div class="apply-cta">
+                <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Openings -->
+    <section id="current-openings" class="careers-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Openings</h2>
+            </div>
+            <div class="job-columns">
+                <div class="info-card">
+                    <h3>Rhome or Remote Locations</h3>
+                    <ul class="job-list">
+                        <li>Fabric Building Installer - Remote</li>
+                        <li>Production Helper AM and PM shifts</li>
+                        <li>Solidworks Designer/Detailer</li>
+                        <li>Safety Manager</li>
+                        <li>Fabric Technician</li>
+                        <li>Flux Core Welder - AM and PM shift</li>
+                        <li>SolidWorks Designer - Structural Steel</li>
+                        <li>Saw Operator - PM shift</li>
+                        <li>Shipping and Receiving Manager</li>
+                        <li>Shipping and Receiving Clerk</li>
+                        <li>Production Helper AM and PM shifts</li>
+                        <li>Project Manager - Commercial Construction</li>
+                        <li>Sales Account Manager - Overhead Doors</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Canada or Remote Locations</h3>
+                    <ul class="job-list">
+                        <li>Administrative Assistant - Beausejour, MB</li>
+                        <li>Shipper and Receiver - East Selkirk, MB</li>
+                        <li>Assistant Door Technician - Beausejour, MB</li>
+                        <li>Assistant Door Technician - Brandon, MB</li>
+                        <li>Assistant Door Technician - Winnipeg, MB</li>
+                        <li>Estimator - Nisku, AB</li>
+                        <li>Finance Manager - Lockport, MB</li>
+                        <li>Human Resource Specialist</li>
+                        <li>Lead Door Technician - Regina, SK</li>
+                        <li>Lead Door Technician - Saskatoon, SK</li>
+                        <li>Lead Door Technician - Fort McMurray, AB</li>
+                        <li>Lead Door Technician - Lethbridge, AB</li>
+                        <li>Lead Door Technician - Edmonton, AB</li>
+                        <li>Lead Door Technician - Red Deer, AB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
