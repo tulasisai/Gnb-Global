@@ -262,10 +262,22 @@ p {
     border: 1px solid rgba(0,0,0,0.05);
 }
 
-.nav-dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+/* Desktop: Show dropdown on hover */
+@media (min-width: 769px) {
+    .nav-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Mobile: Disable hover effects, use .active class only */
+@media (max-width: 768px) {
+    .nav-dropdown:hover .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 .dropdown-menu li {
