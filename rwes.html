@@ -134,27 +134,33 @@
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>⚡ Fast Install</h3>
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Install</h3>
                     <p>RWES installs 50-80% faster than tarps or poly sheeting. A 4-person crew can install 15,000 sqft per day.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>💪 Extreme Durability</h3>
+                    <div class="benefit-icon">💪</div>
+                    <h3>Extreme Durability</h3>
                     <p>Tested to withstand 100+ mph winds, engineered for sustained winds as high as 148 mph.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>✓ OSHA Fall Protection Compliance</h3>
+                    <div class="benefit-icon">✓</div>
+                    <h3>OSHA Fall Protection</h3>
                     <p>RWES Guardwall exceeds OSHA 1910.29 guardrail requirements for top rail height, load resistance, and drop protection.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>♻️ Reusable & Sustainable</h3>
+                    <div class="benefit-icon">♻️</div>
+                    <h3>Reusable & Sustainable</h3>
                     <p>Reusable for years; C2C Certified HDPE membrane reduces waste and supports sustainability goals.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>💧 99% Weather-Tight Seal</h3>
+                    <div class="benefit-icon">💧</div>
+                    <h3>99% Weather-Tight</h3>
                     <p>Keep your jobsite dry, safe, and protected from rain, snow, and wind with our advanced sealing technology.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>📊 Proven Performance</h3>
+                    <div class="benefit-icon">📊</div>
+                    <h3>Proven Performance</h3>
                     <p>Trusted by general contractors nationwide for superior weather protection and job site safety.</p>
                 </div>
             </div>
@@ -467,11 +473,21 @@
             border-left: 4px solid #10b981;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .benefit-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
         .benefit-card h3 {
@@ -608,6 +624,11 @@
 
             .benefits-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .benefit-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
             }
 
             .industries-grid {
