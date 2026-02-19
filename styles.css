@@ -2182,19 +2182,21 @@ p {
         max-height: 0;
         overflow: hidden;
         padding: 0;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.4s ease, padding 0.4s ease;
         border-left: 4px solid var(--secondary-color);
     }
 
     /* Mobile: Only .active expands dropdown, NOT hover */
     .nav-dropdown.active .dropdown-menu {
-        max-height: 300px;
-        padding: 0.5rem 0;
+        max-height: 400px;
+        padding: 0.8rem 0;
     }
 
     .dropdown-menu li {
         border: none;
         padding: 0;
+        opacity: 1;
+        visibility: visible;
     }
 
     .dropdown-menu a {
@@ -2202,6 +2204,8 @@ p {
         font-size: 0.9rem;
         color: var(--text-light);
         display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     .dropdown-arrow {
