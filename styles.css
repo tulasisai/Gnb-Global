@@ -2207,6 +2207,20 @@ p {
         padding: 0.8rem 0;
         overflow: visible;
         z-index: 1100;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-dropdown.active .dropdown-menu li {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-dropdown.active .dropdown-menu a {
+        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     .dropdown-menu li {
@@ -2215,6 +2229,7 @@ p {
         opacity: 1;
         visibility: visible;
         display: block;
+        width: 100%;
     }
 
     .dropdown-menu a {
@@ -2226,6 +2241,14 @@ p {
         visibility: visible;
         width: 100%;
         text-align: left;
+        background: transparent;
+        position: relative;
+        z-index: 1100;
+    }
+
+    .dropdown-menu a:active,
+    .dropdown-menu a:hover {
+        background: var(--accent-light);
     }
 
     .dropdown-arrow {
@@ -2526,6 +2549,15 @@ p {
     .nav-dropdown.active .dropdown-menu {
         display: block;
         overflow: visible;
+        z-index: 1100;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .dropdown-menu li {
+        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     .dropdown-menu a {
@@ -2534,6 +2566,17 @@ p {
         color: var(--text-dark);
         width: 100%;
         text-align: left;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        background: transparent;
+        position: relative;
+        z-index: 1100;
+    }
+
+    .dropdown-menu a:active,
+    .dropdown-menu a:hover {
+        background: var(--accent-light);
     }
 
     .nav-dropdown > a .dropdown-arrow {
