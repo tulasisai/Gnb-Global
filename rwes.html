@@ -50,15 +50,10 @@
 
     <!-- Hero Section -->
     <section class="hero rwes-hero">
-        <div class="container">
-            <h1>RWES</h1>
-            <p class="hero-subtitle">Reusable Weather Enclosure Systems</p>
-            <p>Fast-installation, 99% weather-tight protection with OSHA fall prevention compliance. Withstands winds up to 148 mph.</p>
-            <div class="hero-buttons">
-                <a href="#contact-rwes" class="btn btn-primary">Get Information</a>
-                <a href="tel:+18662644713" class="btn btn-secondary">Call: 1-866-264-4713</a>
-            </div>
-        </div>
+        <video autoplay muted loop class="hero-bg-video">
+            <source src="gnbrwes.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
     </section>
 
     <!-- Overview Section -->
@@ -283,8 +278,33 @@
 
     <style>
         .rwes-hero {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            padding: 100px 20px;
+            position: relative;
+            padding: 0;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
         }
 
         .hero-subtitle {
@@ -573,7 +593,8 @@
 
         @media (max-width: 768px) {
             .rwes-hero {
-                padding: 60px 20px;
+                padding: 0;
+                min-height: 80vh;
             }
 
             .hero-subtitle {
