@@ -568,6 +568,52 @@
             margin: 0 auto;
         }
 
+        .contact-info {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info > p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #1a5595;
+        }
+
+        .contact-method h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin: 0 0 0.8rem 0;
+        }
+
+        .contact-method p {
+            margin: 0.5rem 0;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
         .products-offered {
             padding: 80px 20px;
             background: var(--bg-light);
@@ -626,6 +672,18 @@
             .contact-wrapper {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .contact-info {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-method {
+                padding: 1.2rem;
             }
 
             .contact-form-wrapper {
