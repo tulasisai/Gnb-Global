@@ -38,6 +38,10 @@
 
     <!-- Hero Section -->
     <section class="hero gnb-doors-hero">
+        <video autoplay muted loop class="hero-bg-video">
+            <source src="gnbdoorsvideo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <h1>GNB Doors</h1>
@@ -47,28 +51,6 @@
                     <a href="#contact-doors" class="btn btn-primary">Request Service</a>
                     <a href="tel:+12048176810" class="btn btn-secondary">Call Now: 1-204-817-6810</a>
                 </div>
-            </div>
-            <div class="hero-video">
-                <video width="100%" height="auto" autoplay muted loop style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <source src="gnbdoorsvideo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>See GNB Doors in Action</h2>
-                <p>Watch our professional installation process</p>
-            </div>
-            <div class="video-container">
-                <video width="100%" height="auto" controls style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                    <source src="gnbdoorsvideo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
             </div>
         </div>
     </section>
@@ -321,15 +303,41 @@
 
     <style>
         .gnb-doors-hero {
-            background: linear-gradient(135deg, #1a3a52 0%, #0f2438 100%);
-            padding: 100px 20px;
+            position: relative;
+            padding: 120px 20px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 28, 48, 0.65);
+            z-index: 2;
         }
 
         .gnb-doors-hero .container {
+            position: relative;
+            z-index: 3;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr;
             align-items: center;
+            max-width: 900px;
         }
 
         .hero-content h1 {
@@ -350,19 +358,7 @@
             line-height: 1.6;
         }
 
-        .hero-video {
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-        }
 
-        .hero-video video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
 
         .services-grid {
             display: grid;
@@ -562,7 +558,8 @@
 
         @media (max-width: 768px) {
             .gnb-doors-hero {
-                padding: 60px 20px;
+                padding: 80px 20px;
+                min-height: 500px;
             }
 
             .gnb-doors-hero .container {
