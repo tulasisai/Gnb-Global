@@ -2180,16 +2180,19 @@ p {
         box-shadow: none;
         background: #f5f5f5;
         max-height: 0;
-        overflow: hidden;
+        overflow: visible;
         padding: 0;
-        transition: max-height 0.4s ease, padding 0.4s ease;
+        transition: max-height 0.3s ease;
         border-left: 4px solid var(--secondary-color);
+        display: none;
     }
 
     /* Mobile: Only .active expands dropdown, NOT hover */
     .nav-dropdown.active .dropdown-menu {
-        max-height: 400px;
+        display: block;
+        max-height: 500px;
         padding: 0.8rem 0;
+        overflow: visible;
     }
 
     .dropdown-menu li {
@@ -2197,6 +2200,7 @@ p {
         padding: 0;
         opacity: 1;
         visibility: visible;
+        display: block;
     }
 
     .dropdown-menu a {
@@ -2502,6 +2506,12 @@ p {
     .dropdown-menu {
         background: #fafafa;
         border-left: 3px solid var(--secondary-color);
+        display: none;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        display: block;
+        overflow: visible;
     }
 
     .dropdown-menu a {
