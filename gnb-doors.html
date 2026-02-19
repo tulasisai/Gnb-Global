@@ -49,6 +49,22 @@
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See GNB Doors in Action</h2>
+                <p>Watch our professional installation process</p>
+            </div>
+            <div class="video-container">
+                <video width="100%" height="auto" controls style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <source src="gnbdoorsvideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Overview -->
     <section class="gnb-doors-services">
         <div class="container">
@@ -487,6 +503,22 @@
             background: var(--white);
         }
 
+        .video-section {
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            width: 100%;
+        }
+
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+        }
+
         @media (max-width: 768px) {
             .gnb-doors-hero {
                 padding: 60px 20px;
@@ -525,6 +557,15 @@
 
             .contact-form-wrapper {
                 padding: 1.5rem;
+            }
+
+            .video-container {
+                margin: 2rem auto;
+            }
+
+            .video-container video {
+                max-width: 100%;
+                height: auto;
             }
         }
     </style>
