@@ -6,17 +6,21 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Handle Dropdown Toggles
+// Handle Dropdown Toggles - Priority listener using capture phase
 document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
     toggle.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
         
         const navDropdown = this.closest('.nav-dropdown');
         if (navDropdown) {
-            navDropdown.classList.toggle('active');
+            // Only toggle on mobile (768px and below)
+            if (window.innerWidth <= 768) {
+                navDropdown.classList.toggle('active');
+            }
         }
-    });
+    }, true); // Use capture phase to run FIRST
 });
 
 // Close menu when link is clicked and handle company navigation

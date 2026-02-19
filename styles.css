@@ -2174,7 +2174,7 @@ p {
         border-left: 4px solid var(--secondary-color);
     }
 
-    .nav-dropdown:hover .dropdown-menu,
+    /* Mobile: Only .active expands dropdown, NOT hover */
     .nav-dropdown.active .dropdown-menu {
         max-height: 300px;
         padding: 0.5rem 0;
@@ -2189,12 +2189,14 @@ p {
         padding: 0.8rem 1.5rem 0.8rem 2rem;
         font-size: 0.9rem;
         color: var(--text-light);
+        display: block;
     }
 
     .dropdown-arrow {
         font-size: 0.7rem;
         transition: transform 0.3s ease;
         display: inline-block;
+        margin-left: 0.5rem;
     }
 
     .nav-dropdown.active > a .dropdown-arrow {
