@@ -40,7 +40,16 @@
             align-items: center;
             color: var(--white);
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(15, 36, 54, 0.95) 0%, rgba(26, 58, 82, 0.92) 55%, rgba(13, 42, 63, 0.94) 100%);
+        }
+
+        .careers-hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
         }
 
         .careers-hero .hero-overlay {
@@ -232,6 +241,7 @@
 
     <!-- Hero Section -->
     <section class="careers-hero">
+        <video class="elementor-video" src="https://gnb.group/wp-content/uploads/2025/08/08_25_2025_CC_Leadership-Hiring-video_Horizontal_V1.mp4" autoplay muted loop playsinline controlslist="nodownload"></video>
         <div class="hero-overlay"></div>
     </section>
 
