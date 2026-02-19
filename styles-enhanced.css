@@ -1333,10 +1333,11 @@ textarea:focus {
 .assistant-chat {
     display: none;
     position: fixed;
-    bottom: 90px;
-    right: 20px;
+    bottom: 100px;
+    right: 25px;
     width: 380px;
-    max-height: 600px;
+    max-height: calc(100vh - 150px);
+    min-height: 200px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
@@ -1344,7 +1345,8 @@ textarea:focus {
     animation: slideUp 0.3s ease-out;
     overflow: hidden;
     z-index: 1001;
-    max-width: calc(100vw - 50px);
+    max-width: calc(100vw - 60px);
+    left: auto;
 }
 
 .assistant-chat.active {
@@ -1596,16 +1598,25 @@ textarea:focus {
     background: #999;
 }
 
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .assistant-chat {
+        width: 360px;
+        max-width: calc(100vw - 60px);
+        right: 20px;
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .assistant-chat {
-        width: 90vw;
-        max-width: calc(100vw - 40px);
-        height: auto;
-        max-height: 65vh;
-        bottom: 85px;
-        right: 20px;
+        width: calc(100vw - 50px);
+        max-width: 360px;
+        max-height: 70vh;
+        bottom: 90px;
+        right: 25px;
         left: auto;
+        border-radius: 10px;
     }
 
     .quick-actions {
@@ -1615,28 +1626,24 @@ textarea:focus {
     .message-content {
         max-width: 90%;
     }
+
+    .assistant-header {
+        padding: 16px 18px;
+    }
+
+    .assistant-messages {
+        padding: 14px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .assistant-chat {
-        width: 95vw;
-        max-width: calc(100vw - 30px);
-        height: auto;
-        max-height: 60vh;
-        bottom: 80px;
-        right: 15px;
-        left: auto;
+        width: calc(100vw - 40px);
+        max-width: 340px;
+        max-height: 65vh;
+        bottom: 85px;
+        right: 20px;
         border-radius: 8px;
-    }
-
-    .assistant-widget {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .assistant-toggle {
-        width: 55px;
-        height: 55px;
     }
 
     .quick-actions {
@@ -1644,15 +1651,77 @@ textarea:focus {
     }
 
     .message-content {
-        max-width: 90%;
+        max-width: 88%;
+    }
+}
+
+@media (max-width: 480px) {
+    .assistant-widget {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .assistant-toggle {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .assistant-chat {
+        width: calc(100vw - 35px);
+        max-width: 320px;
+        max-height: 60vh;
+        bottom: 80px;
+        right: 17.5px;
+        left: auto;
+        border-radius: 8px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .quick-action-btn {
+        padding: 7px 8px;
+        font-size: 0.8rem;
+    }
+
+    .message-content {
+        max-width: 88%;
+        padding: 10px 12px;
     }
 
     .assistant-input-area {
-        padding: 10px 14px;
+        padding: 10px 12px;
+        gap: 8px;
     }
 
     .assistant-text-input {
         padding: 8px 10px;
         font-size: 0.9rem;
+    }
+
+    .assistant-send {
+        width: 34px;
+        height: 34px;
+    }
+
+    .assistant-header {
+        padding: 14px 16px;
+    }
+
+    .assistant-title h3 {
+        font-size: 1.15rem;
+    }
+
+    .assistant-title p {
+        font-size: 0.85rem;
+    }
+
+    .assistant-close {
+        font-size: 24px;
+        width: 28px;
+        height: 28px;
     }
 }
