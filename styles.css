@@ -1285,6 +1285,68 @@ p {
     box-shadow: 0 10px 25px rgba(26, 58, 82, 0.3);
 }
 
+/* Comparison Section */
+.comparison {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.comparison-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.comparison-table th {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.comparison-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table .feature-name {
+    font-weight: 700;
+    color: var(--primary-color);
+    background: var(--bg-light);
+    min-width: 150px;
+}
+
+.comparison-table tr:hover {
+    background: rgba(245, 125, 26, 0.05);
+}
+
+.comparison-table tr.highlight-row {
+    background: var(--bg-light);
+    font-weight: 700;
+}
+
+.comparison-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.comparison-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
 /* Products Section */
 .products {
     padding: 80px 20px;
@@ -2590,15 +2652,37 @@ p {
         padding: 50px 0;
     }
 
+    .comparison-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .comparison-table {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
     .comparison-table th,
     .comparison-table td {
         padding: 0.75rem 0.5rem;
         font-size: 0.85rem;
+        word-break: break-word;
     }
 
     .comparison-table .feature-name {
         min-width: 120px;
         padding: 1rem 0.5rem !important;
+    }
+
+    .comparison-cta {
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    .comparison-cta p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
 
     /* Footer */
@@ -2677,6 +2761,17 @@ p {
         font-weight: 600;
     }
 
+    .comparison-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .comparison-cta {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
     /* Gallery */
     .showcase-carousel {
         height: 400px;
@@ -2747,6 +2842,12 @@ p {
     .comparison-table th,
     .comparison-table td {
         padding: 1.25rem 1rem;
+    }
+
+    .comparison-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
     }
 
     /* Gallery */
