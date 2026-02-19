@@ -2123,6 +2123,8 @@ p {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         -webkit-overflow-scrolling: touch;
         z-index: 999;
+        align-items: stretch;
+        padding: 0;
     }
 
     .nav-menu.active {
@@ -2133,6 +2135,7 @@ p {
     .nav-menu li {
         border-bottom: 1px solid var(--border-color);
         padding: 0;
+        width: 100%;
     }
 
     .nav-menu a {
@@ -2143,6 +2146,8 @@ p {
         color: var(--text-dark);
         text-decoration: none;
         transition: all 0.2s ease;
+        width: 100%;
+        text-align: left;
     }
 
     .nav-menu a:active {
@@ -2452,6 +2457,8 @@ p {
     .nav-menu {
         top: 65px;
         max-height: 0;
+        align-items: stretch;
+        padding: 0;
     }
 
     .nav-menu.active {
@@ -2460,11 +2467,14 @@ p {
 
     .nav-menu li {
         border-bottom: 1px solid #f0f0f0;
+        width: 100%;
     }
 
     .nav-menu a {
         padding: 0.85rem 1rem;
         font-size: 0.92rem;
+        width: 100%;
+        text-align: left;
     }
 
     .dropdown-menu {
