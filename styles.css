@@ -2202,10 +2202,12 @@ p {
     .dropdown-menu a {
         padding: 0.8rem 1.5rem 0.8rem 2rem;
         font-size: 0.9rem;
-        color: var(--text-light);
+        color: var(--text-dark);
         display: block;
         opacity: 1;
         visibility: visible;
+        width: 100%;
+        text-align: left;
     }
 
     .dropdown-arrow {
@@ -2505,6 +2507,9 @@ p {
     .dropdown-menu a {
         padding: 0.7rem 1.3rem 0.7rem 2rem;
         font-size: 0.87rem;
+        color: var(--text-dark);
+        width: 100%;
+        text-align: left;
     }
 
     .nav-dropdown > a .dropdown-arrow {
