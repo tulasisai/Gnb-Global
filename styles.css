@@ -2157,12 +2157,15 @@ p {
     /* Mobile Dropdown */
     .nav-dropdown {
         position: relative;
+        width: 100%;
+        display: block;
     }
 
     .nav-dropdown > a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     .dropdown-menu {
@@ -2475,6 +2478,11 @@ p {
         font-size: 0.92rem;
         width: 100%;
         text-align: left;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+        display: block;
     }
 
     .dropdown-menu {
