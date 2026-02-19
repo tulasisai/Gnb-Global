@@ -287,16 +287,17 @@ p {
 .dropdown-menu a {
     display: block;
     padding: 12px 18px;
-    color: var(--text-dark) !important;
+    color: #1f2937;
     font-size: 1rem;
     font-weight: 600;
     white-space: nowrap;
     border-radius: 0;
+    text-decoration: none;
 }
 
 .dropdown-menu a:hover {
-    background: var(--secondary-color) !important;
-    color: var(--white) !important;
+    background: var(--secondary-color);
+    color: var(--white);
 }
 
 /* Remove careers button highlight by default */
@@ -2186,48 +2187,27 @@ p {
 
     .dropdown-menu {
         position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
         background: #f5f5f5;
         max-height: 0;
         overflow: visible;
         padding: 0;
         transition: max-height 0.3s ease;
         border-left: 4px solid var(--secondary-color);
-        display: none;
         z-index: 1100;
+        display: none;
     }
 
-    /* Mobile: Only .active expands dropdown, NOT hover */
+    /* Mobile: Show dropdown when .active */
     .nav-dropdown.active .dropdown-menu {
         display: block;
         max-height: 500px;
         padding: 0.8rem 0;
         overflow: visible;
-        z-index: 1100;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .nav-dropdown.active .dropdown-menu li {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .nav-dropdown.active .dropdown-menu a {
-        display: block;
-        visibility: visible;
-        opacity: 1;
     }
 
     .dropdown-menu li {
         border: none;
         padding: 0;
-        opacity: 1;
-        visibility: visible;
         display: block;
         width: 100%;
     }
@@ -2235,40 +2215,19 @@ p {
     .dropdown-menu a {
         padding: 0.8rem 1.5rem 0.8rem 2rem;
         font-size: 0.9rem;
-        color: #1f2937 !important;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        width: 100% !important;
-        text-align: left !important;
-        background: transparent !important;
+        color: #1f2937;
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: transparent;
         position: relative;
         z-index: 1100;
+        text-decoration: none;
     }
 
-    .dropdown-menu a:active,
     .dropdown-menu a:hover {
-        background: var(--accent-light) !important;
-        color: #1f2937 !important;
-    }
-
-    /* Override the global dropdown-menu a styles for mobile */
-    .nav-dropdown .dropdown-menu a {
-        color: #1f2937 !important;
-        background: #f5f5f5 !important;
-    }
-
-    /* Force dropdown text to be dark - override all parent styles */
-    .nav-dropdown.active .dropdown-menu a,
-    .nav-dropdown.active .dropdown-menu a:hover,
-    .nav-dropdown.active .dropdown-menu a:active {
-        color: #1f2937 !important;
-        background: #f5f5f5 !important;
-    }
-
-    .nav-dropdown.active .dropdown-menu a:hover {
-        background: #efefef !important;
-        color: #1f2937 !important;
+        background: #efefef;
+        color: #1f2937;
     }
 
     .dropdown-arrow {
@@ -2276,6 +2235,10 @@ p {
         transition: transform 0.3s ease;
         display: inline-block;
         margin-left: 0.5rem;
+    }
+
+    .nav-dropdown.active > a .dropdown-arrow {
+        transform: rotate(180deg);
     }
 
     .nav-dropdown.active > a .dropdown-arrow {
@@ -2576,51 +2539,24 @@ p {
 
     .dropdown-menu li {
         display: block;
-        visibility: visible;
-        opacity: 1;
     }
 
     .dropdown-menu a {
         padding: 0.7rem 1.3rem 0.7rem 2rem;
         font-size: 0.87rem;
-        color: #1f2937 !important;
-        width: 100% !important;
-        text-align: left !important;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        background: transparent !important;
+        color: #1f2937;
+        width: 100%;
+        text-align: left;
+        display: block;
+        background: transparent;
         position: relative;
         z-index: 1100;
+        text-decoration: none;
     }
 
-    .dropdown-menu a:active,
     .dropdown-menu a:hover {
-        background: var(--accent-light) !important;
-        color: #1f2937 !important;
-    }
-
-    /* Override the global dropdown-menu a styles for mobile */
-    .nav-dropdown .dropdown-menu a {
-        color: #1f2937 !important;
-        background: #f5f5f5 !important;
-    }
-
-    /* Force dropdown text to be dark - override all parent styles */
-    .nav-dropdown.active .dropdown-menu a,
-    .nav-dropdown.active .dropdown-menu a:hover,
-    .nav-dropdown.active .dropdown-menu a:active {
-        color: #1f2937 !important;
-        background: #fafafa !important;
-    }
-
-    .nav-dropdown.active .dropdown-menu a:hover {
-        background: #efefef !important;
-        color: #1f2937 !important;
-    }
-
-    .nav-dropdown.active .dropdown-menu a:hover {
-        background: #f0f0f0 !important;
+        background: #efefef;
+        color: #1f2937;
     }
 
     .nav-dropdown > a .dropdown-arrow {
