@@ -340,8 +340,19 @@
             max-width: 900px;
         }
 
+        .hero-content {
+            background: rgba(15, 36, 56, 0.85);
+            padding: 3rem;
+            border-radius: 12px;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         .hero-content h1 {
             margin-bottom: 1rem;
+            font-size: 2.5rem;
         }
 
         .hero-subtitle {
@@ -353,9 +364,9 @@
 
         .hero-content > p {
             color: var(--white);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 2rem;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
 
@@ -565,6 +576,15 @@
             .gnb-doors-hero .container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .hero-content {
+                padding: 2rem;
+                max-width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
             }
 
             .hero-subtitle {
