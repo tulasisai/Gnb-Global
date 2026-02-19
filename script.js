@@ -6,9 +6,32 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
+// Handle Dropdown Toggles
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const navDropdown = this.closest('.nav-dropdown');
+        if (navDropdown) {
+            navDropdown.classList.toggle('active');
+        }
+    });
+});
+
 // Close menu when link is clicked and handle company navigation
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', function(e) {
+        // Check if this is a dropdown toggle (it will be handled above)
+        if (this.classList.contains('dropdown-toggle')) {
+            return;
+        }
+        
+        // Close all dropdowns
+        document.querySelectorAll('.nav-dropdown.active').forEach(dd => {
+            dd.classList.remove('active');
+        });
+        
         navMenu.classList.remove('active');
         
         // Handle GNB Companies dropdown navigation
